@@ -196,6 +196,9 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 /* assistant module grid */
 .chat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
 .chatbox{grid-column:span 2;display:flex;flex-direction:column;min-height:560px;min-width:0;border-right:1px solid var(--line)}
+.chat-intro{padding:16px 24px 16px 0;border-bottom:1px solid var(--line);font:400 15px/1.5 var(--f);color:var(--meta);max-width:none}
+.chat-intro p{margin:0 0 6px;max-width:80ch}.chat-intro p:last-child{margin:0}.chat-intro b{color:var(--ink)}
+@media (max-width:760px){.chat-intro{padding-right:0}}
 .chat-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:18px 24px 18px 0;border-bottom:1px solid var(--line)}
 .chat-top .title{font:700 18px/1 var(--f)}
 .msgs{flex:1;overflow-y:auto;padding:24px 24px 24px 0;display:flex;flex-direction:column;gap:18px;max-height:620px}
@@ -238,8 +241,8 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 
 /* deadline strip */
 .deadbar{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:64px}
-section.plazos{padding-top:56px}
-section.plazos .deadbar{margin-bottom:0}
+section.plazos{padding-top:0;border-top:4px solid var(--accent)}
+section.plazos .deadbar{margin-bottom:0;border-top:0}
 section.plazos + section.sec{padding-top:72px}
 .deadbar-head{display:flex;align-items:center;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
 .deadbar-head .t{font:700 16px/1 var(--f)}
@@ -417,6 +420,7 @@ footer .wrap{padding:0}
       <div class="chatbox">
         <div class="chat-top"><span class="title">Conversación</span><span class="meta" id="modeLbl" style="font-size:14px"></span>
           <button class="link" id="clearBtn" type="button" style="margin-left:auto"><span class="ms" aria-hidden="true">refresh</span>Nueva</button></div>
+        <div class="chat-intro"><p>Hola, soy <b>S.I.B UAI</b>, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la <b>unidad</b>, la <b>sede</b>, la <b>cohorte</b>, el <b>ciclo</b> o la <b>situación académica</b>, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo.</p><p>También puedes completar la <b>ficha del caso</b> arriba de esta conversación.</p></div>
         <div class="casebar" id="cohortBox">
           <div class="casebar-head"><span class="t" id="cohQ">Ficha del caso</span><button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button><span class="hint">Opcional. Si falta un dato que cambia la respuesta, S.I.B lo pregunta en la conversación.</span><button class="link" type="button" data-clear-case id="clearCase" hidden>Limpiar</button></div>
           <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
@@ -2088,8 +2092,7 @@ function md(t){let h=esc(t);
  if(list)out.push(`</${list.o?"ol":"ul"}>`);return out.join("");}
 function add(role,text){const d=document.createElement("div");d.className="msg "+(role==="user"?"u":"a");
  if(role==="user")d.textContent=text;else d.innerHTML=md(text);msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;}
-function welcome(){msgs.innerHTML="";const sum=caseSummary();
- add("assistant","Hola, soy **S.I.B UAI**, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la **unidad**, la **sede**, la **cohorte**, el **ciclo** o la **situación académica**, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo."+(sum?`\n\nCaso activo: **${sum}**.`:"\n\nTambién puedes completar la **ficha del caso** arriba de esta conversación."));}
+function welcome(){msgs.innerHTML="";}
 function onCaseChange(){renderSug();renderTram();renderTable();if(!turns.length&&!pending)welcome();}
 welcome();
 
