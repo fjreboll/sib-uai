@@ -238,6 +238,9 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 
 /* deadline strip */
 .deadbar{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:64px}
+section.plazos{padding-top:56px}
+section.plazos .deadbar{margin-bottom:0}
+section.plazos + section.sec{padding-top:72px}
 .deadbar-head{display:flex;align-items:center;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
 .deadbar-head .t{font:700 16px/1 var(--f)}
 .deadline-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -334,7 +337,7 @@ footer .wrap{padding:0}
   main,footer{margin-left:0}
   .topbar{display:flex;position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--bg);border-bottom:1px solid var(--line);align-items:center;gap:20px;padding:12px 24px;overflow-x:auto;white-space:nowrap}
   .topbar .logo{flex-direction:row;align-items:center;gap:10px;margin-right:8px}
-  .topbar .logo b{font-size:18px}
+  .topbar .logo b{font-size:15px;white-space:nowrap}
   .topbar a.nl{font:700 15px/1 var(--f);text-decoration:none;color:var(--ink)}
   .topbar a.nl[aria-current="true"]{color:var(--accent-ink)}
   .wrap{padding-inline:24px}
@@ -366,25 +369,21 @@ footer .wrap{padding:0}
 <aside class="side" aria-label="Navegación">
   <div class="brandblock">
     <a class="uai" href="https://www.uai.cl" target="_blank" rel="noopener" aria-label="Universidad Adolfo Ibáñez (abre uai.cl)"><img class="uai-logo" src="https://uai.cdn7pm.net/sites/logos/DHMVvvBlW5asJyutrhzyGSCEIsDgf1-metabG9nb193ZWJfdWFpXzIwMjYucG5n-.png" alt="Universidad Adolfo Ibáñez" width="160" height="33" onerror="this.replaceWith(Object.assign(document.createElement('b'),{textContent:'UAI',className:'uai-fallback'}))"></a>
-    <a class="logo" href="#inicio" aria-label="S.I.B UAI, sistema inteligente de búsqueda. Ir al inicio"><b>S.I.B<br>UAI</b><span class="sub">Sistema inteligente de búsqueda</span><span class="proto">Prototipo no oficial</span></a>
+    <a class="logo" href="#inicio" aria-label="Sistema inteligente de búsqueda asistida. Ir al inicio"><b>Sistema inteligente de búsqueda asistida</b></a>
   </div>
   <nav aria-label="Secciones">
     <a href="#asistente" data-nav="asistente">Asistente</a>
-    <a href="#tramites" data-nav="tramites">Trámites y plazos</a>
     <a href="#organigrama" data-nav="organigrama">Organigrama</a>
     <a href="#documentos" data-nav="documentos">Documentos</a>
   </nav>
-  <a class="coh-chip unset" href="#cohortBox" data-coh-chip>Definir caso</a>
   <div class="foot">Gestión académica de pregrado<br>Escuela de Comunicaciones y Periodismo · UAI<br>Prototipo independiente, no oficial.<br>Actualizado al 9-nov-2026.</div>
 </aside>
 
 <header class="topbar" aria-label="Navegación">
-  <a class="uai" href="https://www.uai.cl" target="_blank" rel="noopener" aria-label="Universidad Adolfo Ibáñez"><img class="uai-logo" src="https://uai.cdn7pm.net/sites/logos/DHMVvvBlW5asJyutrhzyGSCEIsDgf1-metabG9nb193ZWJfdWFpXzIwMjYucG5n-.png" alt="Universidad Adolfo Ibáñez" width="98" height="20"></a><a class="logo" href="#inicio" aria-label="S.I.B UAI, ir al inicio"><b>S.I.B</b></a>
+  <a class="uai" href="https://www.uai.cl" target="_blank" rel="noopener" aria-label="Universidad Adolfo Ibáñez"><img class="uai-logo" src="https://uai.cdn7pm.net/sites/logos/DHMVvvBlW5asJyutrhzyGSCEIsDgf1-metabG9nb193ZWJfdWFpXzIwMjYucG5n-.png" alt="Universidad Adolfo Ibáñez" width="98" height="20"></a><a class="logo" href="#inicio" aria-label="Sistema inteligente de búsqueda asistida, ir al inicio"><b>Búsqueda asistida</b></a>
   <a class="nl" href="#asistente" data-nav="asistente">Asistente</a>
-  <a class="nl" href="#tramites" data-nav="tramites">Trámites</a>
   <a class="nl" href="#organigrama" data-nav="organigrama">Organigrama</a>
   <a class="nl" href="#documentos" data-nav="documentos">Documentos</a>
-  <a class="coh-chip unset" href="#cohortBox" data-coh-chip>Caso</a>
 </header>
 
 <main>
@@ -398,6 +397,15 @@ footer .wrap{padding:0}
         <p>Escuela de Comunicaciones y Periodismo · Prototipo no oficial</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="plazos" class="plazos" aria-label="Próximos plazos">
+  <div class="wrap">
+    <div class="deadbar" aria-label="Próximos plazos">
+    <div class="deadbar-head"><span class="t">Próximos plazos</span><button class="info" type="button" data-tip="cal" aria-label="Sobre las fechas del calendario"><span class="ms" aria-hidden="true">info</span></button><span class="badge b-plain" id="todayStamp" style="margin-left:auto"></span></div>
+    <ol class="deadline-row" id="timeline"></ol>
+  </div>
   </div>
 </section>
 
@@ -430,11 +438,7 @@ footer .wrap{padding:0}
 
 <section id="tramites" class="sec">
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Procedimientos</span><h2 style="margin-top:12px">Trámites y plazos</h2><p>Toca <span class="ms" aria-hidden="true" style="vertical-align:-4px;font-size:18px">info</span> para ver requisitos, quién resuelve y la norma.</p><div class="coh-line" id="cohTram"></div></div></div>
-    <div class="deadbar" aria-label="Próximos plazos">
-      <div class="deadbar-head"><span class="t">Próximos plazos</span><button class="info" type="button" data-tip="cal" aria-label="Sobre las fechas del calendario"><span class="ms" aria-hidden="true">info</span></button><span class="badge b-plain" id="todayStamp" style="margin-left:auto"></span></div>
-      <ol class="deadline-row" id="timeline"></ol>
-    </div>
+    <div class="sec-head"><div><span class="eyebrow">Procedimientos</span><h2 style="margin-top:12px">Trámites</h2><p>Toca <span class="ms" aria-hidden="true" style="vertical-align:-4px;font-size:18px">info</span> para ver requisitos, quién resuelve y la norma.</p><div class="coh-line" id="cohTram"></div></div></div>
     <div class="tramites" id="tramGrid"></div>
   </div>
 </section>
