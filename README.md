@@ -37,3 +37,7 @@ Este proyecto es independiente y no es un sitio oficial de la UAI. La informaci�
 ## Marca
 
 El logotipo y el favicon son propiedad de la Universidad Adolfo Ibáñez. Su uso en este prototipo debe validarse con la Dirección de Marketing y Posicionamiento de la UAI según la [Guía de Identidad de Marca y Comunicación](https://uai.cdn7pm.net/documentos/manual-corporativo-uai.pdf). El diseño está inspirado en el lenguaje editorial del MIT Media Lab.
+
+## Batería de preguntas
+
+`data/bateria_preguntas_sib.csv` (y `.tsv`, generado con `bateria_preguntas_sib.py`): 44 preguntas tipo de gestión académica con respuesta, factores del caso y fuentes citadas por artículo. Se publica también en la hoja de cálculo "Batería de Preguntas SIB UAI".
