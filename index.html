@@ -241,6 +241,15 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 
 /* deadline strip */
 .deadbar{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:64px}
+/* cinta de trámites */
+.tk{position:relative;overflow:hidden;background:var(--dark);height:72px;margin:calc(-1 * var(--gap-sec)) 0 calc(var(--gap-sec) * .6)}
+.tk::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.28)}
+.tk-track{position:relative;display:flex;width:max-content;height:100%;align-items:center;animation:tkmove 45s linear infinite}
+.tk:hover .tk-track{animation-play-state:paused}
+.tk-item{display:inline-flex;padding:0 28px}
+.tk-item svg{display:block}
+@keyframes tkmove{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.tk-track{animation:none}}
 section.plazos{padding-top:0;border-top:4px solid var(--accent)}
 section.plazos .deadbar{margin-bottom:0;border-top:0}
 section.plazos + section.sec{padding-top:72px}
@@ -432,7 +441,7 @@ footer .wrap{padding:0}
           <button class="send" id="sendBtn" type="submit" aria-label="Enviar consulta"><span class="ms" aria-hidden="true">arrow_forward</span></button>
           <button class="btn" id="stopBtn" type="button" hidden>Detener</button>
         </form>
-        <details class="faqdet" id="faqDet"><summary><span>Consultas frecuentes</span> <span class="n" id="faqN"></span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="faq" id="faq"></div></details>
+        <details class="faqdet" id="faqDet" open><summary><span>Consultas frecuentes</span> <span class="n" id="faqN"></span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="faq" id="faq"></div></details>
       </div>
       
     </div>
@@ -440,6 +449,7 @@ footer .wrap{padding:0}
 </section>
 
 <section id="tramites" class="sec">
+  <div class="tk" id="tramTicker" aria-hidden="true"><div class="tk-track" id="tkTrack"></div></div>
   <div class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Procedimientos</span><h2 style="margin-top:12px">Trámites</h2><p>Toca <span class="ms" aria-hidden="true" style="vertical-align:-4px;font-size:18px">info</span> para ver requisitos, quién resuelve y la norma.</p><div class="coh-line" id="cohTram"></div></div></div>
     <div class="tramites" id="tramGrid"></div>
@@ -2008,6 +2018,7 @@ const TR=[
 function renderTram(){const ns=caseNotes(["cohorte","situacion"]);$("#tramGrid").innerHTML=TR.map(([ic,t,d,w,p,a],i)=>{TIPS["tr"+i]=`<b class="h">${esc(t)}</b>${esc(d)}${dl([["Resuelve",esc(w)],["Plazo",esc(p)],["Norma",esc(a)]])}${ns.length?`<p style="margin:10px 0 0;padding-top:10px;border-top:1px solid #444">${esc(ns.join(" "))}</p>`:""}`;
  return `<article class="tram"><div class="head">${glyph(t,40)}<span class="eyebrow">${esc(a)}</span><button class="info" type="button" data-tip="tr${i}" aria-label="Detalle: ${esc(t)}"><span class="ms" aria-hidden="true">info</span></button></div><div class="body"><h4>${esc(t)}</h4><span class="when">${esc(p)} · ${esc(w)}</span><button class="link" type="button" data-ask="${esc("¿Cómo se tramita: "+t+"? Requisitos, quién resuelve y plazos 2026.")}">Consultar <span class="ms" aria-hidden="true">arrow_forward</span></button></div></article>`;}).join("");}
 renderTram();
+(function(){const t=$("#tkTrack");if(!t)return;const one=TR.map(r=>`<span class="tk-item" title="${esc(r[1])}">${glyph(r[1],40)}</span>`).join("");t.innerHTML=one+one;})();
 
 /* ---------- organigrama ---------- */
 const U={
@@ -2163,7 +2174,7 @@ $("#stopBtn").onclick=()=>ctl&&ctl.abort();
 $("#chatForm").addEventListener("submit",e=>{e.preventDefault();const v=$("#chatIn").value;$("#chatIn").value="";ask(v);});
 $("#chatIn").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#chatForm").requestSubmit();}});
 
-document.addEventListener("click",e=>{const b=e.target.closest("[data-ask]");if(b){if(b.closest("#faq"))$("#faqDet").open=false;ask(b.dataset.ask);}});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-ask]");if(b){ask(b.dataset.ask);}});
 $("#clearBtn").onclick=()=>{if(ctl)ctl.abort();turns=[];pending=null;welcome();};
 renderCase();
 if(window.claude&&claude.use){claude.use("sample").then(s=>{sample=s;done();}).catch(()=>{sample=null;done();});}else{done();}
