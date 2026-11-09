@@ -399,6 +399,7 @@ footer .wrap{padding:0}
     <a href="#asistente" data-nav="asistente">Asistente</a>
     <a href="#organigrama" data-nav="organigrama">Organigrama</a>
     <a href="#documentos" data-nav="documentos">Fuentes</a>
+    <a href="#tramites" data-nav="tramites">Trámites</a>
   </nav>
   <div class="foot">Gestión académica de pregrado<br>Escuela de Comunicaciones y Periodismo · UAI<br>Prototipo independiente, no oficial.<br>Actualizado al 9-nov-2026.</div>
 </aside>
@@ -408,6 +409,7 @@ footer .wrap{padding:0}
   <a class="nl" href="#asistente" data-nav="asistente">Asistente</a>
   <a class="nl" href="#organigrama" data-nav="organigrama">Organigrama</a>
   <a class="nl" href="#documentos" data-nav="documentos">Fuentes</a>
+  <a class="nl" href="#tramites" data-nav="tramites">Trámites</a>
 </header>
 
 <main>
@@ -2071,7 +2073,7 @@ $("#fq").addEventListener("input",renderTable);renderTable();
 
 /* ---------- nav activa ---------- */
 const secs=["asistente","tramites","organigrama","documentos"].map(id=>document.getElementById(id));
-function spy(){let cur="";const y=scrollY+140;secs.forEach(s=>{if(s.offsetTop<=y)cur=s.id;});document.querySelectorAll("[data-nav]").forEach(a=>a.setAttribute("aria-current",String(a.dataset.nav===cur)));}
+function spy(){let cur="";const y=scrollY+140;secs.filter(Boolean).map(s=>[s,s.getBoundingClientRect().top+scrollY]).sort((p,q)=>p[1]-q[1]).forEach(([s,t])=>{if(t<=y)cur=s.id;});document.querySelectorAll("[data-nav]").forEach(a=>a.setAttribute("aria-current",String(a.dataset.nav===cur)));}
 addEventListener("scroll",spy,{passive:true});spy();
 
 /* ---------- asistente ---------- */
