@@ -1,6 +1,6 @@
 # Notas del proyecto
 
-Bitácora Académica es una guía no oficial sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la UAI. Está dirigida a estudiantes, docentes, equipos administrativos y autoridades.
+S.I.B UAI (sistema inteligente de búsqueda; antes "Bitácora Académica") es una herramienta no oficial sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la UAI. Está dirigida a estudiantes, docentes, equipos administrativos y autoridades.
 
 - Sitio: https://fjreboll.github.io/bitacora-academica/
 - Corte de la información: 7 de octubre de 2026. La sección de cohortes se agregó el 8 de octubre de 2026. Actualización del 9 de noviembre de 2026: se usan las versiones del portal de Transparencia UAI (www.uai.cl/la-universidad/transparencia) y, ante conflicto, la más reciente; se agregan los reglamentos por cohorte 2020–2025, admisión 2025, aranceles 2026–2027, magíster, protocolo de padres/madres/cuidadores 2026 y política de IA 2026.
@@ -8,7 +8,7 @@ Bitácora Académica es una guía no oficial sobre reglamentos, plazos, trámite
 ## Estructura del sitio
 
 1. **Inicio:** título, la pregunta "¿En qué año ingresaste a la UAI?", el buscador y tres preguntas sugeridas.
-2. **Asistente ("Pregúntale a la Bitácora"):** responde solo con la normativa recopilada y cita el documento y el artículo. En GitHub Pages funciona como búsqueda local. La versión con IA funciona dentro de Claude.
+2. **Asistente ("Consulta al S.I.B"):** responde solo con la normativa recopilada y cita el documento y el artículo. En GitHub Pages funciona como búsqueda local. La versión con IA funciona dentro de Claude.
 3. **Trámites y plazos:**
    - La cohorte elegida.
    - Los próximos 5 plazos del Calendario Académico 2026.
@@ -55,3 +55,11 @@ La opción "Atiendo estudiantes" recuerda verificar el año de ingreso del estud
 1. Ejecuta `data/descargar_corpus.py` con el catálogo para descargar los documentos y detectar cambios.
 2. Actualiza la base normativa y el catálogo en `data/`.
 3. Vuelve a insertar ambos en `index.html`, en los bloques `<script id="kb">` y `<script id="catalog">`.
+
+
+## Iteración 8 (9-nov-2026): S.I.B UAI
+
+- Nuevo nombre: S.I.B UAI (sistema inteligente de búsqueda). La URL del sitio y el repositorio se mantienen.
+- Usuario objetivo: secretarías académicas y encargados de gestión académica estudiantil. Los textos hablan del "estudiante" en tercera persona.
+- Ficha del caso con 5 factores: unidad, sede, cohorte, ciclo y situación académica. Se guarda solo en el navegador (`sib.caso`); no se deben ingresar datos personales.
+- El asistente detecta qué factores cambian la respuesta según la consulta y los pregunta uno a uno antes de responder (con opción de omitir o responder con la regla general). Cada respuesta muestra el caso, incluye "Aplicación al caso" y un botón para copiarla.
