@@ -57,12 +57,12 @@ h1,h2,h3,h4{margin:0;font-weight:700;text-wrap:balance}
 /* ficha del caso (dentro del asistente) */
 .casebar{padding:16px 24px 16px 0;border-bottom:1px solid var(--line)}
 .casebar-head{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-bottom:12px}
-.casebar-head .t{font:700 16px/1.2 var(--f)}
-.casebar-head .hint{font:400 13px/1.35 var(--f);color:var(--meta);flex:1 1 260px}
+.casebar-head .t{font:700 11px/1.2 var(--f);text-transform:uppercase;letter-spacing:.06em}
+.casebar-head .hint{font:400 11px/1.35 var(--f);color:var(--meta);flex:1 1 260px}
 .casebar-head .link{margin-left:auto}
 .casebar .case-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px}
-.casebar .case-grid label{color:var(--meta);font-size:12px}
-.casebar .case-grid select{height:40px;font-size:14px;border-color:var(--ink);background-color:var(--bg);color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
+.casebar .case-grid label{color:var(--meta);font-size:11px}
+.casebar .case-grid select{height:36px;font-size:12px;border-color:var(--ink);background-color:var(--bg);color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
 .casebar .case-grid select.set{background-color:var(--ink);color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
 .case-det{margin-top:12px}
 .case-det summary{cursor:pointer;font:700 14px/1.3 var(--f);color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
@@ -195,8 +195,8 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 
 /* assistant module grid */
 .chat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
-.chatbox{grid-column:span 2;display:flex;flex-direction:column;min-height:560px;min-width:0;border-right:1px solid var(--line)}
-.chat-intro{padding:16px 24px 16px 0;border-bottom:1px solid var(--line);font:400 15px/1.5 var(--f);color:var(--meta);max-width:none}
+.chatbox{grid-column:span 2;display:flex;flex-direction:column;min-width:0;border-right:1px solid var(--line)}
+.chat-intro{padding:16px 24px 16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:400 15px/1.5 var(--f);color:var(--meta);max-width:none}
 .chat-intro p{margin:0 0 6px;max-width:80ch}.chat-intro p:last-child{margin:0}.chat-intro b{color:var(--ink)}
 @media (max-width:760px){.chat-intro{padding-right:0}}
 .chat-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:18px 24px 18px 0;border-bottom:1px solid var(--line)}
@@ -211,7 +211,9 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 .msg.a code{font-family:var(--f-mono);font-size:.88em;background:var(--block);padding:1px 4px}
 .msg.a h4{margin:10px 0 4px;font:700 17px/1.2 var(--f)}
 .msg .note{font:400 13px/1.3 var(--f);color:var(--meta);margin-top:8px}
-.composer{display:flex;gap:0;align-items:stretch;padding:0 24px 0 0;margin-top:auto}
+.composer{display:flex;gap:0;align-items:stretch;padding:0 24px 0 0;margin-top:0}
+.msgs:empty{display:none}
+.chatbox .status:empty{padding:0 0 8px}
 .composer .field{flex:1;display:flex}
 .composer label{position:absolute;left:-9999px}
 .composer textarea{flex:1;min-height:60px;max-height:160px;resize:vertical;border:2px solid var(--ink);border-right:0;border-radius:0;background:transparent;color:var(--ink);font:500 16px/1.4 var(--f);padding:16px;min-width:0}
@@ -427,19 +429,19 @@ footer .wrap{padding:0}
       <button class="link" id="clearBtn" type="button"><span class="ms" aria-hidden="true">refresh</span>Nueva conversación</button></div>
     <div class="chat">
       <div class="chatbox">
-        <div class="chat-intro"><p>Hola, soy <b>S.I.B UAI</b>, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la <b>unidad</b>, la <b>sede</b>, la <b>cohorte</b>, el <b>ciclo</b> o la <b>situación académica</b>, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo.</p><p>También puedes completar la <b>ficha del caso</b> arriba de esta conversación.</p></div>
-        <div class="casebar" id="cohortBox">
-          <div class="casebar-head"><span class="t" id="cohQ">Ficha del caso</span><button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button><span class="hint">Opcional. Si falta un dato que cambia la respuesta, S.I.B lo pregunta en la conversación.</span><button class="link" type="button" data-clear-case id="clearCase" hidden>Limpiar</button></div>
-          <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
-          <details class="case-det" id="caseDet" hidden><summary>Qué implica este caso</summary><div class="cohort-res" id="cohortRes" aria-live="polite"></div></details>
-        </div>
-        <div class="msgs" id="msgs" aria-live="polite"></div>
-        <div class="status" id="status"></div>
         <form class="composer" id="chatForm" autocomplete="off">
           <div class="field"><label for="chatIn">Consulta</label><textarea id="chatIn" rows="1" placeholder="Escribe la consulta del estudiante"></textarea></div>
           <button class="send" id="sendBtn" type="submit" aria-label="Enviar consulta"><span class="ms" aria-hidden="true">arrow_forward</span></button>
           <button class="btn" id="stopBtn" type="button" hidden>Detener</button>
         </form>
+        <div class="status" id="status"></div>
+        <div class="msgs" id="msgs" aria-live="polite"></div>
+        <div class="chat-intro"><p>Hola, soy <b>S.I.B UAI</b>, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la <b>unidad</b>, la <b>sede</b>, la <b>cohorte</b>, el <b>ciclo</b> o la <b>situación académica</b>, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo.</p><p>También puedes completar la <b>ficha del caso</b> justo debajo de este texto.</p></div>
+        <div class="casebar" id="cohortBox">
+          <div class="casebar-head"><span class="t" id="cohQ">Ficha del caso</span><button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button><span class="hint">Opcional. Si falta un dato que cambia la respuesta, S.I.B lo pregunta en la conversación.</span><button class="link" type="button" data-clear-case id="clearCase" hidden>Limpiar</button></div>
+          <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
+          <details class="case-det" id="caseDet" hidden><summary>Qué implica este caso</summary><div class="cohort-res" id="cohortRes" aria-live="polite"></div></details>
+        </div>
         <details class="faqdet" id="faqDet" open><summary><span>Consultas frecuentes</span> <span class="n" id="faqN"></span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="faq" id="faq"></div></details>
       </div>
       
