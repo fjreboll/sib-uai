@@ -1,6 +1,6 @@
 # Base normativa UAI + Escuela de Comunicaciones y Periodismo
 
-Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio de documentos uai.cdn7pm.net. Las fechas de versión salen del propio documento o del encabezado HTTP Last-Modified. El catálogo completo está en `catalogo_documentos_uai_fcom.csv/.json` (55 entradas).
+Corte: 9 de noviembre de 2026 (primer corte: 7-oct-2026). Fuente prioritaria: **portal de Transparencia UAI** (www.uai.cl/la-universidad/transparencia); cuando un documento tiene varias versiones, se usa la más reciente a esta fecha. Fuentes complementarias: alumno.uai.cl, www.uai.cl y uai.cdn7pm.net. El catálogo completo está en `catalogo_documentos_uai_fcom.csv/.json` (75 entradas).
 
 ## 0. Jerarquía y vigencia
 
@@ -8,13 +8,32 @@ Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio
 |---|---|---|---|
 | Institucional | Estatutos UAI (2016; archivo actualizado 30-jun-2026) · Reglamento Orgánico General | Vigente | UAI-INS-01/02 |
 | General de pregrado | **Reglamento de los Programas de Pregrado (2-mar-2026)** | Vigente para todo el pregrado | UAI-REG-01 |
-| General (cohortes ≤2025) | Reglamento de Licenciaturas y Bachilleratos (D.A. 16-2025) en el Folleto Reglamentos 2025 | Se aplica si es **más favorable** al estudiante (art. 70, Reg. 2026) | UAI-REG-02 |
+| General (cohortes 2020–2025) | Reglamento de Licenciaturas y Bachilleratos **de cada promoción de ingreso** (portal de Transparencia: 2020, 2021, 2022, 2023, 2024 y 2025) | Se aplica si es **más favorable** al estudiante (art. 70, Reg. 2026) | UAI-COH-2020…2025 |
+| Admisión | Reglamento de Admisión de Pregrado 2025 (14-feb-2025) | Versión más reciente publicada | UAI-ADM-01 |
 | Específico | Homologaciones y Convalidaciones (15-dic-2023, cohortes desde 2024) | Vigente | UAI-REG-03 |
-| Disciplinario | Código de Honor (D.A. 1-2025) | Vigente | UAI-REG-06 |
+| Disciplinario | Código de Honor (14-mar-2024, modificado 2-ene-2025) · Derechos y Deberes (13-nov-2019) | Vigente | UAI-REG-06, UAI-REG-12 |
+| Apoyo | Protocolo para estudiantes padres, madres, embarazadas y cuidadores (24-abr-2026) · Política de IA (6-jul-2026) | Vigente | UAI-PRO-14, UAI-PRO-15 |
 | Calendario | Calendario Académico 2026, **versión del 22-ene-2026** | Vigente | UAI-CAL-01 |
 | Facultad | Página de carrera, folleto 2026 y mallas (Periodismo, Comunicación Estratégica, articulación con Ing. Comercial) | Vigente | FCOM-01…05 |
 
+**Conflictos de versión resueltos (corte 9-nov-2026, se usa la más reciente)**
+
+| Documento | Versión anterior en el catálogo | Versión usada ahora | ID |
+|---|---|---|---|
+| Reglamentos por cohorte 2021–2024 | Folletos de alumno.uai.cl (contenido no revisado) | Reglamento de cada promoción en el portal de Transparencia, revisado | UAI-COH-2021…2024 |
+| Reglamento cohorte 2025 | Folleto 2025 (D.A. 16-2025) | Portal, 31-ene-2025 (mismo texto) | UAI-COH-2025 |
+| Política para estudiantes padres, madres y embarazadas | Política ago-2022 | Protocolo 24-abr-2026 (agrega cuidadores) | UAI-PRO-14 |
+| Código de Honor | PDF 2025 de alumno.uai.cl | Portal: modificado el 2-ene-2025 | UAI-REG-06 |
+| Ayudantes de docencia | Página alumno.uai.cl (6-mar-2024) | Portal (4-mar-2024, mismo reglamento) | UAI-REG-05 |
+| Políticas de Vida Estudiantil, Bienestar e Inclusión | Páginas de alumno.uai.cl sin fecha | Portal: 31-dic-2024, 24-dic-2024 y 2-ene-2025 | UAI-PRO-07/08/02 |
+| Admisión | Solo página web | Reglamento de Admisión 2025 (2024 y 2022 quedan históricos) | UAI-ADM-01 |
+| Aranceles | Página de carrera | Decretos de valores 2026 (9-ene-2026) y 2027 (3-ago-2026) | UAI-FIN-07/06 |
+
 **Alertas de actualización detectadas**
+
+- El portal de Transparencia rotula el Reglamento de Homologaciones como "2023"; el archivo se llama 2025 y el texto está fechado el 15-dic-2023.
+- El portal no publica el Calendario Académico; se mantiene la versión del 22-ene-2026.
+- Los PDF del portal no muestran el número del decreto aprobatorio; los números D.A. citados vienen de los folletos.
 
 - La página "Solicitudes Académicas" de Santiago todavía publica plazos del 2.º semestre de 2020 (UAI-WEB-02).
 - La página "Protocolos y Políticas" de Santiago enlaza el Calendario 2025 como si fuera el vigente.
@@ -27,16 +46,32 @@ Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio
 
 ## 0b. Qué reglamento te rige según tu año de ingreso (cohorte)
 
-Las reglas académicas dependen del año en que ingresaste a la UAI (tu cohorte o promoción de ingreso). El Reglamento de Pregrado 2026 aplica a todo el pregrado, pero el art. 70 establece que quienes ingresaron antes de 2026 conservan el reglamento de su cohorte (de licenciaturas y bachilleratos, o del programa de segundo ciclo que cursan) en lo que les sea **más favorable**.
+Las reglas académicas dependen del año en que ingresaste a la UAI (tu cohorte o promoción de ingreso). El Reglamento de Pregrado 2026 aplica a todo el pregrado, pero el art. 70 establece que quienes ingresaron antes de 2026 conservan el reglamento de su cohorte (de licenciaturas y bachilleratos, o del programa de segundo ciclo que cursan) en lo que les sea **más favorable**. Todos los reglamentos por cohorte están publicados en el portal de Transparencia UAI.
 
 | Año de ingreso | Reglamento académico | Convalidaciones y homologaciones | IDs del catálogo |
 |---|---|---|---|
-| 2026 o posterior | Reglamento de los Programas de Pregrado (2-mar-2026) | Reglamento de Homologaciones y Convalidaciones (15-dic-2023, cohortes desde 2024) | UAI-REG-01, UAI-REG-03 |
-| 2025 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos para la promoción 2025 (D.A. 16-2025) en lo más favorable | Reglamento de Homologaciones (cohortes desde 2024) | UAI-REG-01, UAI-REG-02, UAI-REG-03 |
-| 2024 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos para la promoción 2024 (D.A. 6/2024) en lo más favorable | Reglamento de Homologaciones (cohortes desde 2024) | UAI-REG-01, UAI-REG-07, UAI-REG-03 |
-| 2023 o antes | Reglamento 2026 + el reglamento de licenciatura de tu cohorte en lo más favorable | Cohorte 2023: D.A. 139/2022. Cohortes anteriores: confirmar con la Secretaría Académica | UAI-REG-01, UAI-REG-08, UAI-REG-09, UAI-REG-10 |
+| 2026 o posterior | Reglamento de los Programas de Pregrado (2-mar-2026) | Reglamento de Homologaciones y Convalidaciones (15-dic-2023) | UAI-REG-01, UAI-REG-03 |
+| 2025 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos promoción 2025 (31-ene-2025, D.A. 16-2025) en lo más favorable | Reglamento de Homologaciones | UAI-REG-01, UAI-COH-2025, UAI-REG-03 |
+| 2024 | Reglamento 2026 + Reglamento Académico de Licenciaturas y Bachilleratos promoción 2024 (14-ene-2024) en lo más favorable | Reglamento de Homologaciones | UAI-REG-01, UAI-COH-2024, UAI-REG-03 |
+| 2023 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos promoción 2023 (10-ene-2023) en lo más favorable | Reglamento de Homologaciones; confirmar con la Secretaría Académica | UAI-REG-01, UAI-COH-2023 |
+| 2022 | Reglamento 2026 + Reglamento de Bachilleratos y Licenciaturas promoción 2022 (17-ene-2022) en lo más favorable | D.A. 20/2020 (citado en arts. 26 y 33) | UAI-REG-01, UAI-COH-2022 |
+| 2021 | Reglamento 2026 + Reglamento promoción 2021 (1-feb-2021) en lo más favorable | D.A. 20/2020 | UAI-REG-01, UAI-COH-2021 |
+| 2020 | Reglamento 2026 + Reglamento promoción 2020 (18-feb-2020) en lo más favorable | Normas citadas en el reglamento | UAI-REG-01, UAI-COH-2020 |
 
-Fuentes de la tabla: art. 70 del Reglamento 2026; considerandos del Folleto Reglamentos 2025, p. 5 (D.A. 6/2024, "aplicable a contar de la promoción de ingreso 2024") y p. 18 (D.A. 139/2022, "aplicable a contar de la promoción de ingreso 2023"). Los folletos 2021–2024 están catalogados pero su contenido no se revisó en detalle en este corte.
+**Diferencias clave entre cohortes (licenciaturas)**
+
+| Regla | 2026 | 2025 | 2024 | 2022–2023 | 2020–2021 |
+|---|---|---|---|---|---|
+| Alerta académica (≥50 % de créditos reprobados desde el 3.er semestre) | Art. 51 | Art. 41 | Art. 41 | Art. 40 (2023) / art. 41 (2022) | No existe con ese nombre |
+| Eliminación tras semestre recuperativo | <15 / <31 créditos | <15 / <31 | <15 / <31 | **<12 / <28** | <14 créditos tras semestre con <50 % aprobado (arts. 29–30) |
+| Reprobación acumulada de ramos distintos | 5 (3.º), 6 (4.º), 7 (6.º), 8 (8.º), 9 (10.º) | 5, 6, 7 (planes de 8), 8 (planes de 10+) | 5, 6, 7 (planes de 8) | 5 (3.º), 7 (6.º) o 9 en total | 5 (3.º), 7 (6.º) o 9 en total |
+| Créditos mínimos acumulados por semestre | No | No | No | No | **Sí** (Periodismo: 29, 35, 58, 83, 111, 139 y 171 del 2.º al 8.º semestre) |
+| Educación Física como causal | No | No | No | No | Sí: <2 créditos al 4.º o <4 al 6.º semestre |
+| Inglés | Sin avance 2 semestres seguidos | Igual | Igual | Igual | Igual, y además sin B2 al 9.º semestre |
+| Plazo máximo licenciatura | +2 (6 sem.) / +3 (7+ sem.); título profesional +6 | +2 / +3 | +2 (6 sem.) / +3 (8 sem.) | +2 / +3 | +3 después del 8.º semestre |
+| Anulaciones / suspensiones | 2 / 2 | 2 / 2 | 2 / 2 | 2 / 2 | 2 / 2 |
+
+En todos los casos, si la regla de tu cohorte te favorece más que la del Reglamento 2026, se aplica la de tu cohorte (art. 70). Ejemplo: para la cohorte 2023, el umbral tras un semestre recuperativo (<12 o <28 créditos) es más bajo y, por lo tanto, más favorable que el del Reglamento 2026 (<15 o <31).
 
 **Qué cambia en 2026 respecto del reglamento de la cohorte 2025** (comparación directa de ambos textos):
 
@@ -55,7 +90,9 @@ Fuentes de la tabla: art. 70 del Reglamento 2026; considerandos del Folleto Regl
 
 ## 1. Ingreso
 
-**Admisión regular.** Se postula por el Sistema de Acceso centralizado. La carrera Comunicación Estratégica – Periodismo tiene código DEMRE 42005 en Peñalolén y 42025 en Viña del Mar. Ponderaciones 2027: NEM 10 %, Ranking 30 %, Competencia Lectora 35 %, M1 15 %, Historia o Ciencias 10 %. Aranceles 2027: UF 200 en Peñalolén y UF 170 en Viña; matrícula UF 23 y UF 21 respectivamente (FCOM-01).
+**Admisión regular.** Se postula por el Sistema de Acceso centralizado. La carrera Comunicación Estratégica – Periodismo tiene código DEMRE 42005 en Peñalolén y 42025 en Viña del Mar. Ponderaciones 2027: NEM 10 %, Ranking 30 %, Competencia Lectora 35 %, M1 15 %, Historia o Ciencias 10 %. Aranceles 2027: UF 200 en Peñalolén y UF 170 en Viña; matrícula UF 23 y UF 21 respectivamente (FCOM-01; confirmado en el decreto de valores 2027 del 3-ago-2026, UAI-FIN-06). Para la cohorte 2026 rigen los mismos valores (UAI-FIN-07).
+
+**Reglamento de Admisión de Pregrado 2025 (UAI-ADM-01):** las vías especiales se dividen en complementarias a la PAES (8 vías, p. ej., desempeño destacado en enseñanza media, deportistas destacados) e independientes de la PAES (5 vías, p. ej., IB, A-Levels, cambio de universidad, personas tituladas) (art. 8). La admisión directa no puede superar el 20 % de los ingresos (art. 5) y la decisión se puede apelar por escrito dentro de 5 días hábiles (art. 16).
 
 **Admisión especial (UAI-WEB-06)** tiene dos grupos de vías:
 
@@ -202,6 +239,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
   - El estudiante postula por el sistema de la universidad indicando sus preferencias en orden de prioridad, en el período del calendario.
   - Debe cumplir los requisitos de admisión de cada programa.
   - El grado se rige por el reglamento de cada magíster.
+  - **Reglamento General de Magíster (4-sep-2024, UAI-POS-01):** el magíster de continuidad no exige experiencia laboral y se orienta a licenciados UAI (art. 4). Excepcionalmente, un estudiante UAI que aún no termina la licenciatura puede ingresar en forma condicional si le faltan como máximo 12 SCT, con certificación escrita del Director de Pregrado; no puede rendir la actividad de graduación hasta acreditar la licenciatura (art. 11).
   - Los programas son presenciales, a tiempo completo, mayoritariamente de marzo a diciembre (oferta de marzo de 2027) (UAI-WEB-07).
 - **Escuela de Comunicaciones y Periodismo (FCOM-01/02):**
   - 3 años de plan común conducen a la **Licenciatura en Comunicación (Social)**.
@@ -232,3 +270,11 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
 3. Requisitos de admisión al Magíster en Comunicación e Innovación para estudiantes UAI (cupos, PPA mínimo).
 4. Reglamento de cada magíster de continuidad.
 5. Calendario específico de inscripción bimestral del segundo ciclo de Periodismo, que el calendario general menciona "según calendario específico".
+
+## 11. Políticas y protocolos de apoyo (portal de Transparencia)
+
+- **Estudiantes padres, madres, embarazadas y cuidadores (protocolo del 24-abr-2026, UAI-PRO-14; reemplaza la política de 2022):** inscripción prioritaria de asignaturas; retiro anticipado de ramos sin reprobación; asistencia mínima reducida; evaluaciones y calendarios flexibles; inasistencias justificables por enfermedad del hijo o hija, controles, embarazo o 5 días hábiles de permiso tras el nacimiento; suspensión de estudios por 2 semestres, prorrogable una vez por 2 más, que pausa los plazos máximos.
+- **Política de Inteligencia Artificial (6-jul-2026, UAI-PRO-15):** el uso de IA debe fortalecer el pensamiento crítico y ser transparente. No fija reglas para cada evaluación: cada Escuela define las reglas de su disciplina y la Dirección de Docencia Institucional elaborará una guía para docentes y estudiantes. Se revisará el Código de Honor para alinearlo. Pregunta a tu docente o a la Escuela qué uso de IA se permite en cada curso.
+- **Beca de Honor Académico (cohortes 2023 en adelante, UAI-REG-11):** mejor promedio de la carrera por cohorte y sede, al menos 50 créditos aprobados el año anterior sin reprobar, al día en inglés y Educación Física y sin sanciones. Exime del 25 % de las cuotas mensuales del año (arts. 2, 4 y 5).
+- **Derechos y deberes (13-nov-2019, UAI-REG-12):** 19 derechos (art. 3) y 9 deberes (art. 4); las sanciones se aplican según el Código de Honor.
+- **Vida estudiantil, bienestar y salud mental, inclusión y diversidad, igualdad de género:** políticas publicadas en el portal (UAI-PRO-07, 08, 02 y 16).
