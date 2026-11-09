@@ -1,4 +1,4 @@
-# Bitácora Académica
+# S.I.B UAI — Sistema inteligente de búsqueda
 
 Guía de consulta, **no oficial**, sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la Universidad Adolfo Ibáñez (UAI).
 
