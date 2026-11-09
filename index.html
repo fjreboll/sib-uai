@@ -225,6 +225,17 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 .chat{grid-template-columns:minmax(0,1fr)!important}
 .chatbox{grid-column:auto!important;border-right:0!important}
 .faqdet{margin:20px 24px 0 0;border-top:1px solid var(--line)}
+.xboxes{display:grid;gap:12px;margin:24px 0 8px}
+.xbox{border:2px solid var(--ink);min-width:0}
+.faqdet .xbox summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:16px 18px;cursor:pointer;list-style:none}
+.faqdet .xbox summary::-webkit-details-marker{display:none}
+.faqdet .xbox summary .t{font:800 20px/1.1 var(--f)}
+.faqdet .xbox summary .sub{font:400 14px/1.3 var(--f);color:var(--meta)}
+.faqdet .xbox summary .tog{margin-left:auto;align-self:center;transition:transform .2s}
+.faqdet .xbox[open] summary .tog{transform:rotate(180deg)}
+.faqdet .xbox[open] summary{border-bottom:1px solid var(--line)}
+.xbody{padding:16px 18px 20px;min-width:0}
+.xnote{display:flex;align-items:center;gap:6px;margin:0 0 12px;font:400 14px/1.4 var(--f);color:var(--meta)}
 .faqdet summary{display:flex;align-items:center;gap:6px;padding:16px 0;cursor:pointer;list-style:none;font:700 16px/1.2 var(--f)}
 .faqdet summary::-webkit-details-marker{display:none}
 .faqdet summary .n{color:var(--faint);font-weight:700}
@@ -387,7 +398,7 @@ footer .wrap{padding:0}
   <nav aria-label="Secciones">
     <a href="#asistente" data-nav="asistente">Asistente</a>
     <a href="#organigrama" data-nav="organigrama">Organigrama</a>
-    <a href="#documentos" data-nav="documentos">Documentos</a>
+    <a href="#documentos" data-nav="documentos">Fuentes</a>
   </nav>
   <div class="foot">Gestión académica de pregrado<br>Escuela de Comunicaciones y Periodismo · UAI<br>Prototipo independiente, no oficial.<br>Actualizado al 9-nov-2026.</div>
 </aside>
@@ -396,7 +407,7 @@ footer .wrap{padding:0}
   <a class="uai" href="https://www.uai.cl" target="_blank" rel="noopener" aria-label="Universidad Adolfo Ibáñez"><img class="uai-logo" src="https://uai.cdn7pm.net/sites/logos/DHMVvvBlW5asJyutrhzyGSCEIsDgf1-metabG9nb193ZWJfdWFpXzIwMjYucG5n-.png" alt="Universidad Adolfo Ibáñez" width="98" height="20"></a>
   <a class="nl" href="#asistente" data-nav="asistente">Asistente</a>
   <a class="nl" href="#organigrama" data-nav="organigrama">Organigrama</a>
-  <a class="nl" href="#documentos" data-nav="documentos">Documentos</a>
+  <a class="nl" href="#documentos" data-nav="documentos">Fuentes</a>
 </header>
 
 <main>
@@ -442,7 +453,32 @@ footer .wrap{padding:0}
           <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
           <details class="case-det" id="caseDet" hidden><summary>Qué implica este caso</summary><div class="cohort-res" id="cohortRes" aria-live="polite"></div></details>
         </div>
-        <details class="faqdet" id="faqDet" open><summary><span>Consultas frecuentes</span> <span class="n" id="faqN"></span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="faq" id="faq"></div></details>
+        <details class="faqdet" id="faqDet" open><summary><span>Consultas frecuentes</span> <span class="n" id="faqN"></span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="faq" id="faq"></div><div class="xboxes">
+          <details class="xbox" id="organigrama"><summary><span class="t">Organigrama</span><span class="sub">Quién resuelve cada trámite según los reglamentos</span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="xbody">
+            <p class="xnote">Pasa el cursor o toca una unidad.<button class="info" type="button" data-tip="orgnote" aria-label="Sobre este organigrama"><span class="ms" aria-hidden="true">info</span></button></p>
+    <div class="org-wrap" tabindex="0" aria-label="Organigrama. Desliza horizontalmente para ver todas las unidades.">
+      <ul class="org" id="org"></ul>
+    </div>
+    <div class="bodies" id="bodies"></div>
+    <div class="legend-org"><span><i style="background:var(--dark);border-color:var(--dark)"></i>Escuela de Comunicaciones y Periodismo</span><span><i style="border-style:dashed"></i>Instancias transversales</span></div>
+    <div class="sap">
+      <div class="sap-head"><span class="t">Secretaria asignada en Santiago según la inicial del apellido del estudiante</span><button class="info" type="button" data-tip="sap" aria-label="Horario y ubicación"><span class="ms" aria-hidden="true">info</span></button></div>
+      <div class="letters" id="letters"></div>
+    </div>
+          </div></details>
+          <details class="xbox" id="documentos"><summary><span class="t">Fuentes</span><span class="sub">Reglamentos y documentos oficiales, con su estado de vigencia</span><span class="ms tog" aria-hidden="true">expand_more</span></summary><div class="xbody">
+            <div class="coh-line" id="cohDocs"></div>
+    <div class="filters">
+      <div class="field"><label for="fq">Buscar documento</label><input id="fq" type="search" placeholder="Buscar documento"></div>
+      <div class="chips" id="estChips" role="group" aria-label="Filtrar por estado"></div>
+    </div>
+    <table>
+      <thead><tr><th>Documento</th><th>Estado</th><th><span hidden>Detalle</span></th></tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <div class="more"><button class="btn" id="moreBtn" type="button"></button></div>
+          </div></details>
+        </div></details>
       </div>
       
     </div>
@@ -457,36 +493,6 @@ footer .wrap{padding:0}
   </div>
 </section>
 
-<section id="organigrama" class="sec">
-  <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Roles</span><h2 style="margin-top:12px">Organigrama</h2><p>Quién resuelve cada trámite según los reglamentos. Pasa el cursor o toca una unidad.</p></div>
-      <button class="info" type="button" data-tip="orgnote" aria-label="Sobre este organigrama"><span class="ms" aria-hidden="true">info</span></button></div>
-    <div class="org-wrap" tabindex="0" aria-label="Organigrama. Desliza horizontalmente para ver todas las unidades.">
-      <ul class="org" id="org"></ul>
-    </div>
-    <div class="bodies" id="bodies"></div>
-    <div class="legend-org"><span><i style="background:var(--dark);border-color:var(--dark)"></i>Escuela de Comunicaciones y Periodismo</span><span><i style="border-style:dashed"></i>Instancias transversales</span></div>
-    <div class="sap">
-      <div class="sap-head"><span class="t">Secretaria asignada en Santiago según la inicial del apellido del estudiante</span><button class="info" type="button" data-tip="sap" aria-label="Horario y ubicación"><span class="ms" aria-hidden="true">info</span></button></div>
-      <div class="letters" id="letters"></div>
-    </div>
-  </div>
-</section>
-
-<section id="documentos" class="sec">
-  <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Fuentes</span><h2 style="margin-top:12px">Documentos</h2><p>Reglamentos y fuentes oficiales. Toca <span class="ms" aria-hidden="true" style="vertical-align:-4px;font-size:18px">info</span> para ver alcance, versión y notas.</p><div class="coh-line" id="cohDocs"></div></div></div>
-    <div class="filters">
-      <div class="field"><label for="fq">Buscar documento</label><input id="fq" type="search" placeholder="Buscar documento"></div>
-      <div class="chips" id="estChips" role="group" aria-label="Filtrar por estado"></div>
-    </div>
-    <table>
-      <thead><tr><th>Documento</th><th>Estado</th><th><span hidden>Detalle</span></th></tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
-    <div class="more"><button class="btn" id="moreBtn" type="button"></button></div>
-  </div>
-</section>
 </main>
 
 <a class="fab" href="#asistente" aria-label="Consultar al S.I.B"><span class="ms" aria-hidden="true">chat</span><span class="txt">Consultar</span></a>
@@ -2176,6 +2182,9 @@ $("#chatForm").addEventListener("submit",e=>{e.preventDefault();const v=$("#chat
 $("#chatIn").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#chatForm").requestSubmit();}});
 
 document.addEventListener("click",e=>{const b=e.target.closest("[data-ask]");if(b){ask(b.dataset.ask);}});
+function openBox(id){const d=document.getElementById(id);if(!d||d.tagName!=="DETAILS")return;$("#faqDet").open=true;d.open=true;setTimeout(()=>d.scrollIntoView({block:"start"}),0);}
+document.addEventListener("click",e=>{const a=e.target.closest('a[href="#organigrama"],a[href="#documentos"]');if(a){e.preventDefault();openBox(a.getAttribute("href").slice(1));}});
+if(location.hash==="#organigrama"||location.hash==="#documentos")openBox(location.hash.slice(1));
 $("#clearBtn").onclick=()=>{if(ctl)ctl.abort();turns=[];pending=null;welcome();};
 renderCase();
 if(window.claude&&claude.use){claude.use("sample").then(s=>{sample=s;done();}).catch(()=>{sample=null;done();});}else{done();}
