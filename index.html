@@ -194,7 +194,7 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 #tt .on-var{color:#a0a0a0}
 
 /* assistant module grid */
-.chat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid var(--ink)}
+.chat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
 .chatbox{grid-column:span 2;display:flex;flex-direction:column;min-height:560px;min-width:0;border-right:1px solid var(--line)}
 .chat-intro{padding:16px 24px 16px 0;border-bottom:1px solid var(--line);font:400 15px/1.5 var(--f);color:var(--meta);max-width:none}
 .chat-intro p{margin:0 0 6px;max-width:80ch}.chat-intro p:last-child{margin:0}.chat-intro b{color:var(--ink)}
@@ -423,12 +423,10 @@ footer .wrap{padding:0}
 <section id="asistente" class="sec">
   <div class="tk" aria-hidden="true"><div class="tk-track"></div></div>
   <div class="wrap">
-    <div class="sec-head"><div><span class="eyebrow">Asistente</span><h2 style="margin-top:12px">Consulta al S.I.B</h2><p>Escribe la consulta tal como llegó. Si la respuesta depende de la unidad, la sede, la cohorte, el ciclo o la situación del estudiante, el sistema te lo pregunta antes de responder y cita documento y artículo.</p></div>
-      <button class="info" type="button" data-tip="ai" aria-label="Cómo funciona el asistente"><span class="ms" aria-hidden="true">info</span></button></div>
+    <div class="sec-head"><div><span class="eyebrow">Asistente</span><h2 style="margin-top:12px">Consulta al S.I.B</h2></div>
+      <button class="link" id="clearBtn" type="button"><span class="ms" aria-hidden="true">refresh</span>Nueva conversación</button></div>
     <div class="chat">
       <div class="chatbox">
-        <div class="chat-top"><span class="title">Conversación</span><span class="meta" id="modeLbl" style="font-size:14px"></span>
-          <button class="link" id="clearBtn" type="button" style="margin-left:auto"><span class="ms" aria-hidden="true">refresh</span>Nueva</button></div>
         <div class="chat-intro"><p>Hola, soy <b>S.I.B UAI</b>, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la <b>unidad</b>, la <b>sede</b>, la <b>cohorte</b>, el <b>ciclo</b> o la <b>situación académica</b>, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo.</p><p>También puedes completar la <b>ficha del caso</b> arriba de esta conversación.</p></div>
         <div class="casebar" id="cohortBox">
           <div class="casebar-head"><span class="t" id="cohQ">Ficha del caso</span><button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button><span class="hint">Opcional. Si falta un dato que cambia la respuesta, S.I.B lo pregunta en la conversación.</span><button class="link" type="button" data-clear-case id="clearCase" hidden>Limpiar</button></div>
@@ -2170,7 +2168,7 @@ async function answer(q){const keys=needed(q);
   else bubble.innerHTML=st+md(e.text||"")+`<div class="note">${esc(ERR[code]||ERR.upstream_error)}</div>`;
   turns.pop();}
  done();}
-function done(){busy=false;$("#sendBtn").disabled=false;$("#stopBtn").hidden=true;$("#status").textContent="";$("#modeLbl").textContent=sample?"· con IA":"· búsqueda en la normativa";}
+function done(){busy=false;$("#sendBtn").disabled=false;$("#stopBtn").hidden=true;$("#status").textContent="";const ml=$("#modeLbl");if(ml)ml.textContent=sample?"· con IA":"· búsqueda en la normativa";}
 $("#stopBtn").onclick=()=>ctl&&ctl.abort();
 $("#chatForm").addEventListener("submit",e=>{e.preventDefault();const v=$("#chatIn").value;$("#chatIn").value="";ask(v);});
 $("#chatIn").addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();$("#chatForm").requestSubmit();}});
