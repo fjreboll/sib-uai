@@ -319,7 +319,7 @@ footer .wrap{padding:0}
     <a href="#documentos" data-nav="documentos">Documentos</a>
   </nav>
   <a class="coh-chip unset" href="#cohortBox" data-coh-chip>Indica tu año de ingreso</a>
-  <div class="foot">Escuela de Comunicaciones y Periodismo · UAI<br>Prototipo independiente, no oficial.<br>Actualizado al 7-oct-2026.</div>
+  <div class="foot">Escuela de Comunicaciones y Periodismo · UAI<br>Prototipo independiente, no oficial.<br>Actualizado al 9-nov-2026.</div>
 </aside>
 
 <header class="topbar" aria-label="Navegación">
@@ -422,13 +422,13 @@ footer .wrap{padding:0}
 
 <a class="fab" href="#asistente" aria-label="Preguntar al asistente"><span class="ms" aria-hidden="true">chat</span><span class="txt">Preguntar</span></a>
 
-<footer><div class="wrap">Bitácora Académica · Prototipo independiente, no es un sitio oficial de la Universidad Adolfo Ibáñez. Información actualizada al 7 de octubre de 2026; si hay diferencias, prima el documento oficial. Diseño inspirado en el lenguaje editorial del MIT Media Lab, con la paleta neutra y el celeste de la marca UAI.</div></footer>
+<footer><div class="wrap">Bitácora Académica · Prototipo independiente, no es un sitio oficial de la Universidad Adolfo Ibáñez. Información actualizada al 9 de noviembre de 2026; si hay diferencias, prima el documento oficial. Diseño inspirado en el lenguaje editorial del MIT Media Lab, con la paleta neutra y el celeste de la marca UAI.</div></footer>
 
 <div id="tt" role="tooltip" aria-hidden="true"></div>
 
 <script type="text/plain" id="kb"># Base normativa UAI + Escuela de Comunicaciones y Periodismo
 
-Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio de documentos uai.cdn7pm.net. Las fechas de versión salen del propio documento o del encabezado HTTP Last-Modified. El catálogo completo está en `catalogo_documentos_uai_fcom.csv/.json` (55 entradas).
+Corte: 9 de noviembre de 2026 (primer corte: 7-oct-2026). Fuente prioritaria: **portal de Transparencia UAI** (www.uai.cl/la-universidad/transparencia); cuando un documento tiene varias versiones, se usa la más reciente a esta fecha. Fuentes complementarias: alumno.uai.cl, www.uai.cl y uai.cdn7pm.net. El catálogo completo está en `catalogo_documentos_uai_fcom.csv/.json` (75 entradas).
 
 ## 0. Jerarquía y vigencia
 
@@ -436,13 +436,32 @@ Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio
 |---|---|---|---|
 | Institucional | Estatutos UAI (2016; archivo actualizado 30-jun-2026) · Reglamento Orgánico General | Vigente | UAI-INS-01/02 |
 | General de pregrado | **Reglamento de los Programas de Pregrado (2-mar-2026)** | Vigente para todo el pregrado | UAI-REG-01 |
-| General (cohortes ≤2025) | Reglamento de Licenciaturas y Bachilleratos (D.A. 16-2025) en el Folleto Reglamentos 2025 | Se aplica si es **más favorable** al estudiante (art. 70, Reg. 2026) | UAI-REG-02 |
+| General (cohortes 2020–2025) | Reglamento de Licenciaturas y Bachilleratos **de cada promoción de ingreso** (portal de Transparencia: 2020, 2021, 2022, 2023, 2024 y 2025) | Se aplica si es **más favorable** al estudiante (art. 70, Reg. 2026) | UAI-COH-2020…2025 |
+| Admisión | Reglamento de Admisión de Pregrado 2025 (14-feb-2025) | Versión más reciente publicada | UAI-ADM-01 |
 | Específico | Homologaciones y Convalidaciones (15-dic-2023, cohortes desde 2024) | Vigente | UAI-REG-03 |
-| Disciplinario | Código de Honor (D.A. 1-2025) | Vigente | UAI-REG-06 |
+| Disciplinario | Código de Honor (14-mar-2024, modificado 2-ene-2025) · Derechos y Deberes (13-nov-2019) | Vigente | UAI-REG-06, UAI-REG-12 |
+| Apoyo | Protocolo para estudiantes padres, madres, embarazadas y cuidadores (24-abr-2026) · Política de IA (6-jul-2026) | Vigente | UAI-PRO-14, UAI-PRO-15 |
 | Calendario | Calendario Académico 2026, **versión del 22-ene-2026** | Vigente | UAI-CAL-01 |
 | Facultad | Página de carrera, folleto 2026 y mallas (Periodismo, Comunicación Estratégica, articulación con Ing. Comercial) | Vigente | FCOM-01…05 |
 
+**Conflictos de versión resueltos (corte 9-nov-2026, se usa la más reciente)**
+
+| Documento | Versión anterior en el catálogo | Versión usada ahora | ID |
+|---|---|---|---|
+| Reglamentos por cohorte 2021–2024 | Folletos de alumno.uai.cl (contenido no revisado) | Reglamento de cada promoción en el portal de Transparencia, revisado | UAI-COH-2021…2024 |
+| Reglamento cohorte 2025 | Folleto 2025 (D.A. 16-2025) | Portal, 31-ene-2025 (mismo texto) | UAI-COH-2025 |
+| Política para estudiantes padres, madres y embarazadas | Política ago-2022 | Protocolo 24-abr-2026 (agrega cuidadores) | UAI-PRO-14 |
+| Código de Honor | PDF 2025 de alumno.uai.cl | Portal: modificado el 2-ene-2025 | UAI-REG-06 |
+| Ayudantes de docencia | Página alumno.uai.cl (6-mar-2024) | Portal (4-mar-2024, mismo reglamento) | UAI-REG-05 |
+| Políticas de Vida Estudiantil, Bienestar e Inclusión | Páginas de alumno.uai.cl sin fecha | Portal: 31-dic-2024, 24-dic-2024 y 2-ene-2025 | UAI-PRO-07/08/02 |
+| Admisión | Solo página web | Reglamento de Admisión 2025 (2024 y 2022 quedan históricos) | UAI-ADM-01 |
+| Aranceles | Página de carrera | Decretos de valores 2026 (9-ene-2026) y 2027 (3-ago-2026) | UAI-FIN-07/06 |
+
 **Alertas de actualización detectadas**
+
+- El portal de Transparencia rotula el Reglamento de Homologaciones como "2023"; el archivo se llama 2025 y el texto está fechado el 15-dic-2023.
+- El portal no publica el Calendario Académico; se mantiene la versión del 22-ene-2026.
+- Los PDF del portal no muestran el número del decreto aprobatorio; los números D.A. citados vienen de los folletos.
 
 - La página "Solicitudes Académicas" de Santiago todavía publica plazos del 2.º semestre de 2020 (UAI-WEB-02).
 - La página "Protocolos y Políticas" de Santiago enlaza el Calendario 2025 como si fuera el vigente.
@@ -455,16 +474,32 @@ Corte: 7 de octubre de 2026. Fuentes: alumno.uai.cl, www.uai.cl y el repositorio
 
 ## 0b. Qué reglamento te rige según tu año de ingreso (cohorte)
 
-Las reglas académicas dependen del año en que ingresaste a la UAI (tu cohorte o promoción de ingreso). El Reglamento de Pregrado 2026 aplica a todo el pregrado, pero el art. 70 establece que quienes ingresaron antes de 2026 conservan el reglamento de su cohorte (de licenciaturas y bachilleratos, o del programa de segundo ciclo que cursan) en lo que les sea **más favorable**.
+Las reglas académicas dependen del año en que ingresaste a la UAI (tu cohorte o promoción de ingreso). El Reglamento de Pregrado 2026 aplica a todo el pregrado, pero el art. 70 establece que quienes ingresaron antes de 2026 conservan el reglamento de su cohorte (de licenciaturas y bachilleratos, o del programa de segundo ciclo que cursan) en lo que les sea **más favorable**. Todos los reglamentos por cohorte están publicados en el portal de Transparencia UAI.
 
 | Año de ingreso | Reglamento académico | Convalidaciones y homologaciones | IDs del catálogo |
 |---|---|---|---|
-| 2026 o posterior | Reglamento de los Programas de Pregrado (2-mar-2026) | Reglamento de Homologaciones y Convalidaciones (15-dic-2023, cohortes desde 2024) | UAI-REG-01, UAI-REG-03 |
-| 2025 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos para la promoción 2025 (D.A. 16-2025) en lo más favorable | Reglamento de Homologaciones (cohortes desde 2024) | UAI-REG-01, UAI-REG-02, UAI-REG-03 |
-| 2024 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos para la promoción 2024 (D.A. 6/2024) en lo más favorable | Reglamento de Homologaciones (cohortes desde 2024) | UAI-REG-01, UAI-REG-07, UAI-REG-03 |
-| 2023 o antes | Reglamento 2026 + el reglamento de licenciatura de tu cohorte en lo más favorable | Cohorte 2023: D.A. 139/2022. Cohortes anteriores: confirmar con la Secretaría Académica | UAI-REG-01, UAI-REG-08, UAI-REG-09, UAI-REG-10 |
+| 2026 o posterior | Reglamento de los Programas de Pregrado (2-mar-2026) | Reglamento de Homologaciones y Convalidaciones (15-dic-2023) | UAI-REG-01, UAI-REG-03 |
+| 2025 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos promoción 2025 (31-ene-2025, D.A. 16-2025) en lo más favorable | Reglamento de Homologaciones | UAI-REG-01, UAI-COH-2025, UAI-REG-03 |
+| 2024 | Reglamento 2026 + Reglamento Académico de Licenciaturas y Bachilleratos promoción 2024 (14-ene-2024) en lo más favorable | Reglamento de Homologaciones | UAI-REG-01, UAI-COH-2024, UAI-REG-03 |
+| 2023 | Reglamento 2026 + Reglamento de Licenciaturas y Bachilleratos promoción 2023 (10-ene-2023) en lo más favorable | Reglamento de Homologaciones; confirmar con la Secretaría Académica | UAI-REG-01, UAI-COH-2023 |
+| 2022 | Reglamento 2026 + Reglamento de Bachilleratos y Licenciaturas promoción 2022 (17-ene-2022) en lo más favorable | D.A. 20/2020 (citado en arts. 26 y 33) | UAI-REG-01, UAI-COH-2022 |
+| 2021 | Reglamento 2026 + Reglamento promoción 2021 (1-feb-2021) en lo más favorable | D.A. 20/2020 | UAI-REG-01, UAI-COH-2021 |
+| 2020 | Reglamento 2026 + Reglamento promoción 2020 (18-feb-2020) en lo más favorable | Normas citadas en el reglamento | UAI-REG-01, UAI-COH-2020 |
 
-Fuentes de la tabla: art. 70 del Reglamento 2026; considerandos del Folleto Reglamentos 2025, p. 5 (D.A. 6/2024, "aplicable a contar de la promoción de ingreso 2024") y p. 18 (D.A. 139/2022, "aplicable a contar de la promoción de ingreso 2023"). Los folletos 2021–2024 están catalogados pero su contenido no se revisó en detalle en este corte.
+**Diferencias clave entre cohortes (licenciaturas)**
+
+| Regla | 2026 | 2025 | 2024 | 2022–2023 | 2020–2021 |
+|---|---|---|---|---|---|
+| Alerta académica (≥50 % de créditos reprobados desde el 3.er semestre) | Art. 51 | Art. 41 | Art. 41 | Art. 40 (2023) / art. 41 (2022) | No existe con ese nombre |
+| Eliminación tras semestre recuperativo | <15 / <31 créditos | <15 / <31 | <15 / <31 | **<12 / <28** | <14 créditos tras semestre con <50 % aprobado (arts. 29–30) |
+| Reprobación acumulada de ramos distintos | 5 (3.º), 6 (4.º), 7 (6.º), 8 (8.º), 9 (10.º) | 5, 6, 7 (planes de 8), 8 (planes de 10+) | 5, 6, 7 (planes de 8) | 5 (3.º), 7 (6.º) o 9 en total | 5 (3.º), 7 (6.º) o 9 en total |
+| Créditos mínimos acumulados por semestre | No | No | No | No | **Sí** (Periodismo: 29, 35, 58, 83, 111, 139 y 171 del 2.º al 8.º semestre) |
+| Educación Física como causal | No | No | No | No | Sí: <2 créditos al 4.º o <4 al 6.º semestre |
+| Inglés | Sin avance 2 semestres seguidos | Igual | Igual | Igual | Igual, y además sin B2 al 9.º semestre |
+| Plazo máximo licenciatura | +2 (6 sem.) / +3 (7+ sem.); título profesional +6 | +2 / +3 | +2 (6 sem.) / +3 (8 sem.) | +2 / +3 | +3 después del 8.º semestre |
+| Anulaciones / suspensiones | 2 / 2 | 2 / 2 | 2 / 2 | 2 / 2 | 2 / 2 |
+
+En todos los casos, si la regla de tu cohorte te favorece más que la del Reglamento 2026, se aplica la de tu cohorte (art. 70). Ejemplo: para la cohorte 2023, el umbral tras un semestre recuperativo (<12 o <28 créditos) es más bajo y, por lo tanto, más favorable que el del Reglamento 2026 (<15 o <31).
 
 **Qué cambia en 2026 respecto del reglamento de la cohorte 2025** (comparación directa de ambos textos):
 
@@ -483,7 +518,9 @@ Fuentes de la tabla: art. 70 del Reglamento 2026; considerandos del Folleto Regl
 
 ## 1. Ingreso
 
-**Admisión regular.** Se postula por el Sistema de Acceso centralizado. La carrera Comunicación Estratégica – Periodismo tiene código DEMRE 42005 en Peñalolén y 42025 en Viña del Mar. Ponderaciones 2027: NEM 10 %, Ranking 30 %, Competencia Lectora 35 %, M1 15 %, Historia o Ciencias 10 %. Aranceles 2027: UF 200 en Peñalolén y UF 170 en Viña; matrícula UF 23 y UF 21 respectivamente (FCOM-01).
+**Admisión regular.** Se postula por el Sistema de Acceso centralizado. La carrera Comunicación Estratégica – Periodismo tiene código DEMRE 42005 en Peñalolén y 42025 en Viña del Mar. Ponderaciones 2027: NEM 10 %, Ranking 30 %, Competencia Lectora 35 %, M1 15 %, Historia o Ciencias 10 %. Aranceles 2027: UF 200 en Peñalolén y UF 170 en Viña; matrícula UF 23 y UF 21 respectivamente (FCOM-01; confirmado en el decreto de valores 2027 del 3-ago-2026, UAI-FIN-06). Para la cohorte 2026 rigen los mismos valores (UAI-FIN-07).
+
+**Reglamento de Admisión de Pregrado 2025 (UAI-ADM-01):** las vías especiales se dividen en complementarias a la PAES (8 vías, p. ej., desempeño destacado en enseñanza media, deportistas destacados) e independientes de la PAES (5 vías, p. ej., IB, A-Levels, cambio de universidad, personas tituladas) (art. 8). La admisión directa no puede superar el 20 % de los ingresos (art. 5) y la decisión se puede apelar por escrito dentro de 5 días hábiles (art. 16).
 
 **Admisión especial (UAI-WEB-06)** tiene dos grupos de vías:
 
@@ -630,6 +667,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
   - El estudiante postula por el sistema de la universidad indicando sus preferencias en orden de prioridad, en el período del calendario.
   - Debe cumplir los requisitos de admisión de cada programa.
   - El grado se rige por el reglamento de cada magíster.
+  - **Reglamento General de Magíster (4-sep-2024, UAI-POS-01):** el magíster de continuidad no exige experiencia laboral y se orienta a licenciados UAI (art. 4). Excepcionalmente, un estudiante UAI que aún no termina la licenciatura puede ingresar en forma condicional si le faltan como máximo 12 SCT, con certificación escrita del Director de Pregrado; no puede rendir la actividad de graduación hasta acreditar la licenciatura (art. 11).
   - Los programas son presenciales, a tiempo completo, mayoritariamente de marzo a diciembre (oferta de marzo de 2027) (UAI-WEB-07).
 - **Escuela de Comunicaciones y Periodismo (FCOM-01/02):**
   - 3 años de plan común conducen a la **Licenciatura en Comunicación (Social)**.
@@ -660,10 +698,19 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
 3. Requisitos de admisión al Magíster en Comunicación e Innovación para estudiantes UAI (cupos, PPA mínimo).
 4. Reglamento de cada magíster de continuidad.
 5. Calendario específico de inscripción bimestral del segundo ciclo de Periodismo, que el calendario general menciona "según calendario específico".
+
+## 11. Políticas y protocolos de apoyo (portal de Transparencia)
+
+- **Estudiantes padres, madres, embarazadas y cuidadores (protocolo del 24-abr-2026, UAI-PRO-14; reemplaza la política de 2022):** inscripción prioritaria de asignaturas; retiro anticipado de ramos sin reprobación; asistencia mínima reducida; evaluaciones y calendarios flexibles; inasistencias justificables por enfermedad del hijo o hija, controles, embarazo o 5 días hábiles de permiso tras el nacimiento; suspensión de estudios por 2 semestres, prorrogable una vez por 2 más, que pausa los plazos máximos.
+- **Política de Inteligencia Artificial (6-jul-2026, UAI-PRO-15):** el uso de IA debe fortalecer el pensamiento crítico y ser transparente. No fija reglas para cada evaluación: cada Escuela define las reglas de su disciplina y la Dirección de Docencia Institucional elaborará una guía para docentes y estudiantes. Se revisará el Código de Honor para alinearlo. Pregunta a tu docente o a la Escuela qué uso de IA se permite en cada curso.
+- **Beca de Honor Académico (cohortes 2023 en adelante, UAI-REG-11):** mejor promedio de la carrera por cohorte y sede, al menos 50 créditos aprobados el año anterior sin reprobar, al día en inglés y Educación Física y sin sanciones. Exime del 25 % de las cuotas mensuales del año (arts. 2, 4 y 5).
+- **Derechos y deberes (13-nov-2019, UAI-REG-12):** 19 derechos (art. 3) y 9 deberes (art. 4); las sanciones se aplican según el Código de Honor.
+- **Vida estudiantil, bienestar y salud mental, inclusión y diversidad, igualdad de género:** políticas publicadas en el portal (UAI-PRO-07, 08, 02 y 16).
 </script>
 <script type="application/json" id="catalog">{
-  "generado": "2026-10-07",
+  "generado": "2026-11-09",
   "fuentes": [
+    "https://www.uai.cl/la-universidad/transparencia",
     "alumno.uai.cl",
     "www.uai.cl",
     "uai.cdn7pm.net"
@@ -692,10 +739,94 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://uai.cdn7pm.net/documentos/folleto-reglamentos-uai-2025.pdf",
       "pagina_fuente": "https://alumno.uai.cl/santiago/informacion-academica/secretaria-academica/",
       "fecha_version": "2025-04-22",
-      "estado": "Vigente para cohortes ≤2025 (aplicación supletoria art. 70 Reg. 2026)",
+      "estado": "Vigente (compilado de referencia; fuente primaria: portal de Transparencia)",
       "paginas": 78,
-      "notas": "Índice: Reglamento Licenciaturas y Bachilleratos (D.A. 16-2025, cohorte 2025) p.5; Convalidaciones y Homologaciones (D.A. 94-2023) p.18; Deportes p.21; Código de Honor (D.A. 1-2025) p.24; Becas Excelencia Académica (D.A. 89-2025) p.46; Beca de Honor p.59; Beca Artes Liberales (D.R. 51/2015) p.62; Derechos y Deberes de los Estudiantes (D.R. 2019) p.64; Movilidad Estudiantil (D.R. 23-2022) p.67; Distinción Global Student Recognition (D.R. 81-2024) p.74. No se encontró folleto 2026 (URLs -2026 devuelven 403).",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Compilado de 10 reglamentos. Para la cohorte 2025 se usa UAI-COH-2025 (portal), con el mismo texto.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2025",
+      "titulo": "Reglamento de Licenciaturas y Bachilleratos – promoción de ingreso 2025 (D.A. 16-2025)",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2025",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-bachillerato-y-licenciaturas-promocion-de-ingreso-2025.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2025-01-31",
+      "estado": "Vigente para la cohorte 2025 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Mismo texto que el incluido en el Folleto 2025 (D.A. 16-2025). Elimina con PPA<4,0 dos semestres seguidos; tras recuperativo <15/<31 créditos; reprobación acumulada 5 (3.º sem), 6 (4.º), 7 (6.º, planes de 8), 8 (8.º, planes de 10+). Alerta académica art. 41; anulación art. 46; suspensión art. 47.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2024",
+      "titulo": "Reglamento Académico de Licenciaturas y Bachilleratos – promoción de ingreso 2024",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2024",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-bachillerato-y-licenciaturas-para-la-promocion-de-ingreso-ano-2024.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-01-14",
+      "estado": "Vigente para la cohorte 2024 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Tras recuperativo <15/<31 créditos; reprobación acumulada 5 (3.º), 6 (4.º), 7 (6.º, planes de 8). Alerta académica art. 41; cambio de licenciatura arts. 31–32; resuelve el Director de Pregrado.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2023",
+      "titulo": "Reglamento de Licenciaturas y Bachilleratos – promoción de ingreso 2023",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2023",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-bachillerato-y-licenciaturas-para-la-promocion-de-ingreso-ano-2023.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2023-01-10",
+      "estado": "Vigente para la cohorte 2023 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Tras recuperativo <12/<28 créditos (art. 41 n.º 2); reprobación acumulada 5 (3.º), 7 (6.º) o 9 en total. Alerta académica art. 40; recuperativo arts. 38–39; anulación art. 45; suspensión art. 46.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2022",
+      "titulo": "Reglamento de Bachilleratos y Licenciaturas – promoción de ingreso 2022",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2022",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-bachillerato-y-licenciaturas-para-la-promocion-de-ingreso-ano-2022.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2022-01-17",
+      "estado": "Vigente para la cohorte 2022 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Tras recuperativo <12/<28 créditos; reprobación acumulada 5 (3.º), 7 (6.º) o 9 en total; ramos de 1 crédito cuentan como media asignatura. El texto numera dos artículos como 41.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2021",
+      "titulo": "Reglamento de Bachilleratos y Licenciaturas – promoción de ingreso 2021",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2021",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-bachillerato-y-licenciatura-para-la-promocion-de-ingreso-ano-2021.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2021-02-01",
+      "estado": "Vigente para la cohorte 2021 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Sin 'alerta académica' ni 'semestre recuperativo' con ese nombre (arts. 29–30). Créditos mínimos acumulados por semestre (Periodismo: 29, 35, 58, 83, 111, 139, 171 del 2.º al 8.º); Educación Física (2 créditos al 4.º, 4 al 6.º); inglés B2 al 9.º semestre (art. 41).",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-COH-2020",
+      "titulo": "Reglamento de Bachilleratos y Licenciaturas – promoción de ingreso 2020",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohorte 2020",
+      "categorias": "cohorte;causales;alertas;procedimientos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamentos-de-bachillerato-y-licenciatura-promocion-de-ingreso-ano-2020.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2020-02-18",
+      "estado": "Vigente para la cohorte 2020 en lo más favorable (art. 70 Reg. 2026)",
+      "paginas": "",
+      "notas": "Igual estructura que 2021: créditos mínimos por semestre (Periodismo 29…171), Educación Física, inglés B2 al 9.º semestre y reprobación acumulada 5/7/9 (art. 41).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-03",
@@ -704,12 +835,12 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "alcance": "General UAI",
       "categorias": "ingreso;convalidacion;articulacion",
       "url": "https://uai.cdn7pm.net/documentos/reglamento-de-homologaciones-y-convalidaciones-2025.pdf",
-      "pagina_fuente": "https://www.uai.cl/admision/como-postular/admision-directa-especial",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
       "fecha_version": "2023-12-15 (archivo 2025-01-22)",
       "estado": "Vigente",
       "paginas": "4",
-      "notas": "Cohortes desde 2024. Máx. 30% de créditos convalidables; ≤6 cursos de Artes Liberales (excluye CORE); antigüedad ≤6 años; solicitud ≥10 días hábiles antes del inicio del semestre; calificación C (convalidada) / H (homologada); sin apelación.",
-      "fecha_consulta": "2026-10-07"
+      "notas": "El portal lo rotula '2023'; el archivo se llama 2025 y el texto está fechado el 15-dic-2023. Plazo: 10 días hábiles antes del semestre (art. 12); antigüedad máx. 6 años (art. 8); convalidación ≤30 % del plan (art. 10).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-04",
@@ -718,40 +849,138 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "alcance": "General UAI",
       "categorias": "becas;ingreso",
       "url": "https://uai.cdn7pm.net/documentos/reglamento-becas-excelencia-academica-pregrado-2026.pdf",
-      "pagina_fuente": "https://www.uai.cl/admision/becas-y-aranceles/becas",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
       "fecha_version": "2025-12-09",
       "estado": "Vigente (admisión 2026)",
       "paginas": 19,
       "notas": "",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-REG-11",
+      "titulo": "Reglamento de Beca de Honor Académico (a contar de la promoción 2023)",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado · cohortes 2023+",
+      "categorias": "becas;finanzas",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-beca-de-honor-academico-a-contar-de-2023.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2023-01-10",
+      "estado": "Vigente",
+      "paginas": "",
+      "notas": "Mejor promedio de la carrera por cohorte y sede, ≥50 créditos sin reprobar; exime el 25 % de las cuotas mensuales del año (arts. 2, 4 y 5).",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-REG-12",
+      "titulo": "Reglamento de Derechos y Deberes de los y las Estudiantes",
+      "tipo": "Reglamento",
+      "alcance": "UAI",
+      "categorias": "convivencia",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-derechos-y-deberes-de-los-estudiantes.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2019-11-13",
+      "estado": "Vigente",
+      "paginas": "",
+      "notas": "19 derechos (art. 3) y 9 deberes (art. 4); las sanciones remiten al Código de Honor.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-REG-13",
+      "titulo": "Reglamento de Deportes",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado",
+      "categorias": "cursos",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-deportes.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "s/f",
+      "estado": "Vigente (verificar fecha)",
+      "paginas": "",
+      "notas": "Publicado en el portal de Transparencia.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-ADM-01",
+      "titulo": "Reglamento de Admisión de Pregrado 2025",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado",
+      "categorias": "ingreso",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-admision-pregrado-2025.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2025-02-14",
+      "estado": "Vigente (versión más reciente publicada)",
+      "paginas": "",
+      "notas": "Vías complementarias e independientes de la PAES (art. 8); admisión directa ≤20 % de los ingresos (art. 5); apelación en 5 días hábiles (art. 16).",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-ADM-02",
+      "titulo": "Reglamento de Admisión de Pregrado 2024",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado",
+      "categorias": "ingreso",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-admision-de-pregrado-2024.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024",
+      "estado": "Histórico: reemplazado por UAI-ADM-01",
+      "paginas": "",
+      "notas": "",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-ADM-03",
+      "titulo": "Reglamento de Admisión de Pregrado 2022",
+      "tipo": "Reglamento",
+      "alcance": "UAI pregrado",
+      "categorias": "ingreso",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-de-admision-de-pregrado-2022.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2022",
+      "estado": "Histórico: reemplazado por UAI-ADM-01",
+      "paginas": "",
+      "notas": "",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-POS-01",
+      "titulo": "Reglamento General de Programas de Magíster",
+      "tipo": "Reglamento",
+      "alcance": "UAI postgrado",
+      "categorias": "articulación",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-general-de-magisteres-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-09-04",
+      "estado": "Vigente",
+      "paginas": "",
+      "notas": "Magíster de continuidad (art. 4). Ingreso condicional de estudiantes UAI con licenciatura pendiente ≤12 SCT, certificado por el Director de Pregrado (art. 11).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-05",
-      "titulo": "Reglamento sobre Ayudantes de Docencia 2024",
+      "titulo": "Reglamento sobre Ayudantes de Docencia",
       "tipo": "Reglamento",
       "alcance": "General UAI",
       "categorias": "cursos;ayudantias",
-      "url": "https://alumno.uai.cl/santiago/reglamento-ayudantes-2024/",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
-      "fecha_version": "2024-03-06",
-      "estado": "Vigente (última versión publicada)",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-sobre-ayudantes-de-docencia.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-03-04",
+      "estado": "Vigente",
       "paginas": "",
-      "notas": "PDF servido como adjunto WordPress.",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Versión del portal de Transparencia (4-mar-2024); reemplaza el enlace de alumno.uai.cl.",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-06",
-      "titulo": "Código de Honor de los Estudiantes 2025",
+      "titulo": "Código de Honor de los Estudiantes",
       "tipo": "Reglamento disciplinario",
       "alcance": "General UAI",
       "categorias": "convivencia;eliminacion",
-      "url": "https://alumno.uai.cl/assets/uploads/sites/3/2025/01/codigo-honor-2025.pdf",
-      "pagina_fuente": "WebSearch (alumno.uai.cl)",
-      "fecha_version": "2025-01 (D.A. 1-2025)",
+      "url": "https://uai.cdn7pm.net/documentos/codigo-de-honor.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-03-14, modificado 2025-01-02",
       "estado": "Vigente",
       "paginas": "",
-      "notas": "También incluido en Folleto Reglamentos 2025 p.24-45. Sanciones afectan ICA (factor S 0,9/0,8/0,7).",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Versión del portal de Transparencia: fechado 14-mar-2024, vigente desde 1-abr-2024 y modificado el 2-ene-2025 (D.A. 1-2025).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-07",
@@ -762,10 +991,10 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://alumno.uai.cl/assets/uploads/2024/04/reglamentos-uai-2024.pdf",
       "pagina_fuente": "Búsqueda en alumno.uai.cl",
       "fecha_version": "2024-04",
-      "estado": "Rige a la cohorte 2024 en lo más favorable (art. 70); verificar con Secretaría Académica",
+      "estado": "Histórico: reemplazado como fuente por UAI-COH-2024 (portal de Transparencia)",
       "paginas": "",
-      "notas": "Referencia para la cohorte 2024 (Reglamento de Licenciaturas y Bachilleratos, D.A. 6/2024 según el Folleto 2025). Contenido no revisado en detalle en este corte.",
-      "fecha_consulta": "2026-10-08"
+      "notas": "Compilado publicado en alumno.uai.cl. Para la cohorte 2024 se usa la versión del portal de Transparencia (UAI-COH-2024).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-08",
@@ -776,10 +1005,10 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://alumno.uai.cl/assets/uploads/2023/01/reglamentos-uai-2023.pdf",
       "pagina_fuente": "Búsqueda en alumno.uai.cl",
       "fecha_version": "2023-01",
-      "estado": "Rige a la cohorte 2023 en lo más favorable (art. 70); verificar con Secretaría Académica",
+      "estado": "Histórico: reemplazado como fuente por UAI-COH-2023 (portal de Transparencia)",
       "paginas": "",
-      "notas": "Referencia para la cohorte 2023. Contenido no revisado en detalle en este corte.",
-      "fecha_consulta": "2026-10-08"
+      "notas": "Compilado publicado en alumno.uai.cl. Para la cohorte 2023 se usa la versión del portal de Transparencia (UAI-COH-2023).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-09",
@@ -790,10 +1019,10 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://alumno.uai.cl/assets/uploads/sites/2/2022/01/folleto-reglamentos-2022.pdf",
       "pagina_fuente": "Búsqueda en alumno.uai.cl",
       "fecha_version": "2022-01",
-      "estado": "Rige a la cohorte 2022 en lo más favorable (art. 70); verificar con Secretaría Académica",
+      "estado": "Histórico: reemplazado como fuente por UAI-COH-2022 (portal de Transparencia)",
       "paginas": "",
-      "notas": "Referencia para la cohorte 2022. Contenido no revisado en detalle en este corte.",
-      "fecha_consulta": "2026-10-08"
+      "notas": "Compilado publicado en alumno.uai.cl. Para la cohorte 2022 se usa la versión del portal de Transparencia (UAI-COH-2022).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-REG-10",
@@ -804,10 +1033,10 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://alumno.uai.cl/assets/uploads/sites/3/2021/09/reglamentos-2021.pdf",
       "pagina_fuente": "Búsqueda en alumno.uai.cl",
       "fecha_version": "2021-09",
-      "estado": "Rige a la cohorte 2021 en lo más favorable (art. 70); verificar con Secretaría Académica",
+      "estado": "Histórico: reemplazado como fuente por UAI-COH-2021 (portal de Transparencia)",
       "paginas": "",
-      "notas": "Referencia para la cohorte 2021 y anteriores. Contenido no revisado en detalle en este corte.",
-      "fecha_consulta": "2026-10-08"
+      "notas": "Compilado publicado en alumno.uai.cl. Para la cohorte 2021 se usa la versión del portal de Transparencia (UAI-COH-2021).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-INS-01",
@@ -821,7 +1050,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "estado": "Vigente",
       "paginas": 13,
       "notas": "Estatutos aprobados 2-may-2016; archivo actualizado jun-2026.",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-INS-02",
@@ -835,7 +1064,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "estado": "Vigente",
       "paginas": 36,
       "notas": "Define estructura de autoridades (roles).",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-INS-03",
@@ -849,7 +1078,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "estado": "Verificar (posible desfase con cargos 2026)",
       "paginas": 1,
       "notas": "El Reg. 2026 ya nombra 'Vicerrector Académico y de Investigación'.",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-INS-04",
@@ -863,7 +1092,7 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "estado": "Vigente",
       "paginas": 46,
       "notas": "",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-INS-05",
@@ -892,6 +1121,34 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "paginas": 9,
       "notas": "Informes anteriores: 2019-2020, 2020-2022.",
       "fecha_consulta": "2026-10-07"
+    },
+    {
+      "id": "UAI-INS-07",
+      "titulo": "Reglamento del Ombuds UAI",
+      "tipo": "Reglamento",
+      "alcance": "UAI",
+      "categorias": "convivencia",
+      "url": "https://uai.cdn7pm.net/documentos/reglamento-ombuds-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "s/f",
+      "estado": "Vigente",
+      "paginas": "",
+      "notas": "Publicado en el portal de Transparencia.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-INS-08",
+      "titulo": "Estados financieros UAI al 31-dic-2025 y 2024",
+      "tipo": "Informe",
+      "alcance": "UAI",
+      "categorias": "finanzas",
+      "url": "https://uai.cdn7pm.net/documentos/estados-financieros-uai-2024-2025.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2025-12-31",
+      "estado": "Vigente (último ejercicio publicado)",
+      "paginas": "",
+      "notas": "",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-CAL-01",
@@ -942,12 +1199,12 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "alcance": "General UAI",
       "categorias": "convivencia;acoso;denuncias",
       "url": "https://uai.cdn7pm.net/documentos/protocolo-investigacion-y-sancion-frente-al-acoso.pdf",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
       "fecha_version": "s/f",
       "estado": "Vigente",
       "paginas": "",
       "notas": "Referido expresamente en art. 1 Reg. 2026.",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-02",
@@ -955,13 +1212,13 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "tipo": "Política",
       "alcance": "General UAI",
       "categorias": "inclusion;convivencia",
-      "url": "https://alumno.uai.cl/assets/uploads/sites/2/2025/10/poltica-de-inclusin-y-diversidad-.pdf",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
-      "fecha_version": "2025-10",
+      "url": "https://uai.cdn7pm.net/documentos/politica-de-inclusion-y-diversidad-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2025-01-02",
       "estado": "Vigente",
       "paginas": "",
-      "notas": "Referida expresamente en art. 1 Reg. 2026.",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Versión del portal de Transparencia (2-ene-2025).",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-03",
@@ -1025,13 +1282,13 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "tipo": "Política",
       "alcance": "General UAI",
       "categorias": "convivencia;vida estudiantil",
-      "url": "https://alumno.uai.cl/santiago/politica-de-vida-estudiantil-uai/",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
-      "fecha_version": "s/f",
+      "url": "https://uai.cdn7pm.net/documentos/politica-de-vida-estudiantil-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-12-31",
       "estado": "Vigente",
       "paginas": "",
-      "notas": "PDF como adjunto WordPress.",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Versión del portal de Transparencia.",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-08",
@@ -1039,13 +1296,13 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "tipo": "Política",
       "alcance": "General UAI",
       "categorias": "bienestar",
-      "url": "https://alumno.uai.cl/santiago/politica-de-bienestar-y-salud-mental/",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
-      "fecha_version": "s/f",
+      "url": "https://uai.cdn7pm.net/documentos/politica-de-bienestar-y-salud-mental-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2024-12-24",
       "estado": "Vigente",
       "paginas": "",
-      "notas": "PDF como adjunto WordPress.",
-      "fecha_consulta": "2026-10-07"
+      "notas": "Versión del portal de Transparencia. La Comisión de Bienestar y Salud Mental se creó por D.E. 4/2021.",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-09",
@@ -1054,12 +1311,12 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "alcance": "General UAI",
       "categorias": "cursos;justificaciones;deportes",
       "url": "https://alumno.uai.cl/assets/uploads/sites/2/2023/07/decreto-aprueba-politica-estudiantes-deportistas-seleccionados-nacionales.pdf",
-      "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
       "fecha_version": "2023-07",
       "estado": "Vigente",
       "paginas": "",
       "notas": "Referida en art. 26 Reg. 2026 (justificación de inasistencias).",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-10",
@@ -1070,10 +1327,52 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "url": "https://alumno.uai.cl/santiago/2022-8-politica-inclusion-padres-madres-y-embarazadas/",
       "pagina_fuente": "https://alumno.uai.cl/santiago/lo-que-debes-saber/consulta-lo-que-necesites/protocolos-y-politicas-uai/",
       "fecha_version": "2022-08",
-      "estado": "Vigente (verificar)",
+      "estado": "Histórico: reemplazado por UAI-PRO-14 (protocolo 24-abr-2026)",
       "paginas": "",
       "notas": "",
-      "fecha_consulta": "2026-10-07"
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-PRO-14",
+      "titulo": "Protocolo de Inclusión para Estudiantes Padres, Madres, Embarazadas y Cuidadores",
+      "tipo": "Protocolo",
+      "alcance": "UAI pregrado y postgrado",
+      "categorias": "procedimientos;inclusión",
+      "url": "https://uai.cdn7pm.net/documentos/protocolo-de-inclusion-para-padres-madres-embarazadas-y-cuidadores.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2026-04-24",
+      "estado": "Vigente (versión más reciente)",
+      "paginas": "",
+      "notas": "Inscripción prioritaria, retiro anticipado de ramos sin reprobación, asistencia mínima reducida, evaluaciones recalendarizadas, inasistencias justificables y suspensión de hasta 2 semestres prorrogable por 2 más (pausa los plazos máximos).",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-PRO-15",
+      "titulo": "Política de Inteligencia Artificial",
+      "tipo": "Política",
+      "alcance": "UAI",
+      "categorias": "cursos;evaluación;ia",
+      "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2026-07-06",
+      "estado": "Vigente (nueva)",
+      "paginas": "",
+      "notas": "Principios de transparencia y pensamiento crítico. No fija reglas por evaluación: las define cada Escuela y una guía de la Dirección de Docencia (sección V). Prevé revisar el Código de Honor.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-PRO-16",
+      "titulo": "Política de Igualdad de Género",
+      "tipo": "Política",
+      "alcance": "UAI",
+      "categorias": "inclusión",
+      "url": "https://uai.cdn7pm.net/documentos/politica-de-genero-uai.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "s/f",
+      "estado": "Vigente",
+      "paginas": "",
+      "notas": "Publicada en el portal de Transparencia.",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-PRO-11",
@@ -1186,6 +1485,34 @@ Diferencia operativa en Viña del Mar: la web pide justificar en WebC Autoservic
       "paginas": "",
       "notas": "",
       "fecha_consulta": "2026-10-07"
+    },
+    {
+      "id": "UAI-FIN-06",
+      "titulo": "Valores de matrículas y aranceles – promoción de ingreso 2027",
+      "tipo": "Decreto",
+      "alcance": "UAI pregrado · cohorte 2027",
+      "categorias": "finanzas",
+      "url": "https://uai.cdn7pm.net/documentos/valores-matriculas-y-aranceles-2027.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2026-08-03",
+      "estado": "Vigente (cohorte 2027)",
+      "paginas": "",
+      "notas": "Comunicación Estratégica – Periodismo: Peñalolén matrícula UF 23 y arancel UF 200; Viña del Mar UF 21 y UF 170.",
+      "fecha_consulta": "2026-11-09"
+    },
+    {
+      "id": "UAI-FIN-07",
+      "titulo": "Valores de matrículas y aranceles – promoción de ingreso 2026",
+      "tipo": "Decreto",
+      "alcance": "UAI pregrado · cohorte 2026",
+      "categorias": "finanzas",
+      "url": "https://uai.cdn7pm.net/documentos/fija-valores-de-matriculas-y-aranceles-pregrado-ingreso-2026.pdf",
+      "pagina_fuente": "https://www.uai.cl/la-universidad/transparencia",
+      "fecha_version": "2026-01-09",
+      "estado": "Vigente (cohorte 2026)",
+      "paginas": "",
+      "notas": "Mismos valores que 2027 para Comunicación Estratégica – Periodismo. Arancel en 10 cuotas (marzo–diciembre); matrícula se paga en diciembre del año anterior.",
+      "fecha_consulta": "2026-11-09"
     },
     {
       "id": "UAI-ING-01",
@@ -1464,28 +1791,34 @@ $("#todayStamp").textContent="Hoy, "+TODAY.toLocaleDateString("es-CL",{day:"nume
 /* ---------- cohorte ---------- */
 const COH={
  "2026":{chip:"Ingreso 2026",label:"2026 o después",docs:["UAI-REG-01","UAI-REG-03"],
-  res:"Te rige el <b>Reglamento de los Programas de Pregrado 2026</b> en su totalidad. Para convalidar ramos se aplica el Reglamento de Homologaciones (cohortes desde 2024).",
+  res:"Te rige el <b>Reglamento de los Programas de Pregrado 2026</b> en su totalidad. Para convalidar ramos se aplica el Reglamento de Homologaciones.",
   note:""},
- "2025":{chip:"Ingreso 2025",label:"2025",docs:["UAI-REG-01","UAI-REG-02","UAI-REG-03"],
-  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Licenciaturas y Bachilleratos 2025, D.A. 16-2025</b>) te favorece más, se aplica esa (art. 70).",
-  note:"Ingresaste en 2025: si el reglamento de tu cohorte (D.A. 16-2025) tiene una regla más favorable, se aplica esa (art. 70)."},
- "2024":{chip:"Ingreso 2024",label:"2024",docs:["UAI-REG-01","UAI-REG-07","UAI-REG-03"],
-  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Licenciaturas y Bachilleratos 2024, D.A. 6/2024</b>) te favorece más, se aplica esa (art. 70).",
-  note:"Ingresaste en 2024: si el reglamento de tu cohorte (D.A. 6/2024) tiene una regla más favorable, se aplica esa (art. 70)."},
- "2023":{chip:"Ingreso 2023 o antes",label:"2023 o antes",docs:["UAI-REG-01","UAI-REG-08","UAI-REG-09","UAI-REG-10"],
-  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del <b>reglamento de licenciatura de tu cohorte</b> te favorece más, se aplica esa (art. 70). Confirma con la Secretaría Académica cuál es el de tu año.",
-  note:"Ingresaste en 2023 o antes: si el reglamento de tu cohorte tiene una regla más favorable, se aplica esa (art. 70). Confírmalo con la Secretaría Académica."},
- "staff":{chip:"Atiendo estudiantes",label:"Atiendo estudiantes",docs:["UAI-REG-01","UAI-REG-02","UAI-REG-07","UAI-REG-08"],
-  res:"Antes de aplicar una regla, <b>pregunta el año de ingreso del estudiante</b>. Desde 2026 rige el Reglamento de Pregrado 2026 para todos, pero quienes ingresaron antes conservan el reglamento de su cohorte en lo más favorable (art. 70).",
+ "2025":{chip:"Ingreso 2025",label:"2025",docs:["UAI-REG-01","UAI-COH-2025","UAI-REG-03"],
+  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Licenciaturas y Bachilleratos, promoción 2025</b>) te favorece más, se aplica esa (art. 70). Ambos son casi iguales: 2026 agrega el plazo del título profesional y el tope al 10.º semestre.",
+  note:"Ingresaste en 2025: si el reglamento de tu cohorte (31-ene-2025) tiene una regla más favorable, se aplica esa (art. 70)."},
+ "2024":{chip:"Ingreso 2024",label:"2024",docs:["UAI-REG-01","UAI-COH-2024","UAI-REG-03"],
+  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Licenciaturas y Bachilleratos, promoción 2024</b>) te favorece más, se aplica esa (art. 70). Tu reglamento no tiene topes de reprobación acumulada al 8.º ni al 10.º semestre.",
+  note:"Ingresaste en 2024: si el reglamento de tu cohorte (14-ene-2024) tiene una regla más favorable, se aplica esa (art. 70)."},
+ "2023":{chip:"Ingreso 2023",label:"2023",docs:["UAI-REG-01","UAI-COH-2023"],
+  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Licenciaturas y Bachilleratos, promoción 2023</b>) te favorece más, se aplica esa (art. 70). Por ejemplo, tras un semestre recuperativo tu umbral es más bajo: menos de 12 o 28 créditos, en vez de 15 o 31.",
+  note:"Ingresaste en 2023: tu reglamento (10-ene-2023) tiene umbrales más favorables tras el semestre recuperativo (<12/<28 créditos) y en reprobación acumulada (5 al 3.º, 7 al 6.º o 9 en total). Se aplica lo más favorable (art. 70)."},
+ "2022":{chip:"Ingreso 2022",label:"2022",docs:["UAI-REG-01","UAI-COH-2022"],
+  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del reglamento de tu cohorte (<b>Bachilleratos y Licenciaturas, promoción 2022</b>) te favorece más, se aplica esa (art. 70). Tras un semestre recuperativo tu umbral es de 12 o 28 créditos.",
+  note:"Ingresaste en 2022: tu reglamento (17-ene-2022) fija umbrales de 12/28 créditos tras el recuperativo y reprobación acumulada 5/7/9. Se aplica lo más favorable (art. 70)."},
+ "2021":{chip:"Ingreso 2021 o antes",label:"2021 o antes",docs:["UAI-REG-01","UAI-COH-2021","UAI-COH-2020"],
+  res:"Te rige el <b>Reglamento 2026</b>, pero si una regla del <b>reglamento de tu promoción (2021 o 2020)</b> te favorece más, se aplica esa (art. 70). Esos reglamentos usaban créditos mínimos por semestre y requisitos de Educación Física e inglés B2. Si ingresaste antes de 2020, confirma tu reglamento con la Secretaría Académica.",
+  note:"Ingresaste en 2021 o antes: tu reglamento usa créditos mínimos acumulados por semestre (Periodismo: 29 al 2.º … 171 al 8.º), Educación Física e inglés B2 al 9.º semestre. Se aplica lo más favorable (art. 70); confírmalo con la Secretaría Académica."},
+ "staff":{chip:"Atiendo estudiantes",label:"Atiendo estudiantes",docs:["UAI-REG-01","UAI-COH-2025","UAI-COH-2024","UAI-COH-2023","UAI-COH-2022","UAI-COH-2021","UAI-COH-2020"],
+  res:"Antes de aplicar una regla, <b>pregunta el año de ingreso del estudiante</b>. Desde 2026 rige el Reglamento de Pregrado 2026 para todos, pero quienes ingresaron antes conservan el reglamento de su cohorte en lo más favorable (art. 70). Los reglamentos de 2020 a 2025 están en el portal de Transparencia.",
   note:"Verifica el año de ingreso del estudiante: si ingresó antes de 2026, el reglamento de su cohorte se aplica en lo más favorable (art. 70)."}
 };
-const COH_ORDER=["2026","2025","2024","2023","staff"];
+const COH_ORDER=["2026","2025","2024","2023","2022","2021","staff"];
 const CHANGES=["Plazo máximo para el título profesional: 6 semestres adicionales a la duración nominal (art. 52 n.º 6b).","Nuevo tope de reprobación acumulada al 10.º semestre (art. 52 n.º 4).","Segundo programa simultáneo (arts. 37–40) y articulación con Magíster de Continuidad (art. 66).","Nota Final de Título: 70 % nota de egreso + 30 % defensa (art. 28)."];
 let COHORT=null;
 try{const v=localStorage.getItem("bitacora.cohorte");if(v&&COH[v])COHORT=v;}catch(e){}
 const docById=id=>CAT.find(d=>d.id===id);
-function cohortPhrase(){if(!COHORT)return "";return COHORT==="staff"?"atiendo estudiantes":(COHORT==="2023"?"ingresé en 2023 o antes":"ingresé en "+COHORT);}
-function cohortYou(){if(!COHORT)return "";return COHORT==="staff"?"atiendes estudiantes":(COHORT==="2023"?"ingresaste en 2023 o antes":"ingresaste en "+COHORT);}
+function cohortPhrase(){if(!COHORT)return "";return COHORT==="staff"?"atiendo estudiantes":(COHORT==="2021"?"ingresé en 2021 o antes":"ingresé en "+COHORT);}
+function cohortYou(){if(!COHORT)return "";return COHORT==="staff"?"atiendes estudiantes":(COHORT==="2021"?"ingresaste en 2021 o antes":"ingresaste en "+COHORT);}
 function setCohort(c,silent){COHORT=c;try{localStorage.setItem("bitacora.cohorte",c);}catch(e){}renderCohort();if(!silent&&typeof onCohortChange==="function")onCohortChange();}
 function renderCohort(){
  $("#cohSeg").innerHTML=COH_ORDER.map(k=>`<button type="button" role="radio" data-coh="${k}" aria-checked="${COHORT===k}">${COH[k].label}</button>`).join("");
@@ -1508,9 +1841,9 @@ TIPS.cal=`<b class="h">Fechas por semana</b>El Calendario Académico 2026 (versi
 void `<b class="h">Cómo se calcula</b>Aplica las causales de los arts. 49 a 52 del Reglamento 2026. No se cuentan Educación Física, Inglés ni ramos extraprogramáticos, homologados o convalidados. Es orientativo: la resolución la dicta el Decano de Pregrado y, una vez notificada, tienes 2 días hábiles para pedir reconsideración a la Comisión de Gracia (art. 55).`;
 TIPS.orgnote=`<b class="h">Organigrama funcional</b>Se elaboró a partir de los reglamentos y no reemplaza al organigrama oficial de la UAI (PDF de junio de 2024).`;
 TIPS.sap=`<b class="h">Secretaría Académica de Pregrado</b>Primer ciclo: 2.º piso del Edificio F, de lunes a viernes de 9:30 a 16:30. Correo: secretariadepregrado@uai.cl. Segundo ciclo: Edificio C, con Pamela Correa. En Viña del Mar: pregradovina@uai.cl.`;
-TIPS.ai=`<b class="h">Cómo funciona</b>En esta versión web el asistente busca directamente en la normativa; la versión con IA funciona dentro de Claude. Responde solo con la normativa de esta página, actualizada al 7 de octubre de 2026. Si el asistente no está disponible, la página busca directamente en la normativa.`;
+TIPS.ai=`<b class="h">Cómo funciona</b>En esta versión web el asistente busca directamente en la normativa; la versión con IA funciona dentro de Claude. Responde solo con la normativa de esta página, actualizada al 9 de noviembre de 2026. Si el asistente no está disponible, la página busca directamente en la normativa.`;
 TIPS.cohHelp=`<b class="h">Por qué importa tu año de ingreso</b>El Reglamento de Pregrado 2026 aplica a todos, pero quienes ingresaron antes de 2026 conservan el reglamento de su cohorte en lo que les sea más favorable (art. 70). Tu plan de estudio y tu malla también dependen de tu año de ingreso. Puedes verlos en la Intranet de pregrado. Tu elección se guarda solo en este navegador.`;
-TIPS.cohChanges=`<b class="h">Qué cambió en el Reglamento 2026</b><ul style="margin:4px 0 0;padding-left:18px">${CHANGES.map(c=>`<li>${esc(c)}</li>`).join("")}</ul><p style="margin:8px 0 0">Comparación con el reglamento de la cohorte 2025. Para cohortes anteriores, compáralo con el reglamento de tu año.</p>`;
+TIPS.cohChanges=`<b class="h">Qué cambió en el Reglamento 2026</b><ul style="margin:4px 0 0;padding-left:18px">${CHANGES.map(c=>`<li>${esc(c)}</li>`).join("")}</ul><p style="margin:8px 0 0">Comparación con el reglamento de la cohorte 2025. Para cohortes anteriores, revisa la tabla de diferencias por cohorte o pregunta al asistente.</p>`;
 Object.defineProperty(TIPS,"cohNote",{get(){return COHORT?`<b class="h">${esc(COH[COHORT].chip)}</b>${esc(COH[COHORT].note)}`:"";},enumerable:true});
 const tt=$("#tt");let tipEl=null;
 function showTip(el){const k=el.dataset.tip;if(!TIPS[k])return;tipEl=el;tt.innerHTML=TIPS[k];tt.setAttribute("aria-hidden","false");el.setAttribute("aria-describedby","tt");

@@ -2,7 +2,7 @@
 
 Guía de consulta, **no oficial**, sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la Universidad Adolfo Ibáñez (UAI).
 
-Este proyecto es independiente y no es un sitio oficial de la UAI. La información está actualizada al 7 de octubre de 2026. Si hay diferencias, prima el documento oficial y lo que indique la Secretaría Académica.
+Este proyecto es independiente y no es un sitio oficial de la UAI. La información está actualizada al 9 de noviembre de 2026 con las versiones del portal de Transparencia UAI (si un documento tiene varias versiones, se usa la más reciente). Si hay diferencias, prima el documento oficial y lo que indique la Secretaría Académica.
 
 ## Contenido
 
@@ -11,7 +11,7 @@ Este proyecto es independiente y no es un sitio oficial de la UAI. La informaci�
   - Asistente: busca respuestas en la normativa recopilada. En GitHub Pages funciona como búsqueda local.
   - Trámites y plazos: los próximos plazos del Calendario Académico 2026 y 15 trámites con sus requisitos, quién resuelve y la norma.
   - Organigrama funcional, construido a partir de los reglamentos.
-  - Documentos: catálogo de 55 fuentes oficiales con su estado de vigencia.
+  - Documentos: catálogo de 75 fuentes oficiales con su estado de vigencia.
 - `data/`: la base de datos del sitio.
   - `base_normativa_uai_fcom_2026-10-07.md`: la normativa resumida y citada por artículo.
   - `catalogo_documentos_uai_fcom.csv` / `.json`: el catálogo de fuentes, con URL, alcance, fecha de versión y estado.
