@@ -2,7 +2,7 @@
 
 S.I.B UAI (sistema inteligente de búsqueda; antes "Bitácora Académica") es una herramienta no oficial sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la UAI. Está dirigida a estudiantes, docentes, equipos administrativos y autoridades.
 
-- Sitio: https://fjreboll.github.io/bitacora-academica/
+- Sitio: https://fjreboll.github.io/sib-uai/
 - Corte de la información: 7 de octubre de 2026. La sección de cohortes se agregó el 8 de octubre de 2026. Actualización del 9 de noviembre de 2026: se usan las versiones del portal de Transparencia UAI (www.uai.cl/la-universidad/transparencia) y, ante conflicto, la más reciente; se agregan los reglamentos por cohorte 2020–2025, admisión 2025, aranceles 2026–2027, magíster, protocolo de padres/madres/cuidadores 2026 y política de IA 2026.
 
 ## Estructura del sitio
