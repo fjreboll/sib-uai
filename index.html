@@ -54,8 +54,25 @@ h1,h2,h3,h4{margin:0;font-weight:700;text-wrap:balance}
 :root[data-theme="dark"] .uai-logo{filter:none}
 .topbar .uai-logo{width:98px}
 .topbar .logo{padding-left:16px;border-left:1px solid var(--line)}
-/* ficha del caso */
-.case{margin:0 0 32px;max-width:1000px}
+/* ficha del caso (dentro del asistente) */
+.casebar{padding:16px 24px 16px 0;border-bottom:1px solid var(--line)}
+.casebar-head{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-bottom:12px}
+.casebar-head .t{font:700 16px/1.2 var(--f)}
+.casebar-head .hint{font:400 13px/1.35 var(--f);color:var(--meta);flex:1 1 260px}
+.casebar-head .link{margin-left:auto}
+.casebar .case-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px}
+.casebar .case-grid label{color:var(--meta);font-size:12px}
+.casebar .case-grid select{height:40px;font-size:14px;border-color:var(--ink);background-color:var(--bg);color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
+.casebar .case-grid select.set{background-color:var(--ink);color:var(--bg);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none'/%3E%3C/svg%3E")}
+.case-det{margin-top:12px}
+.case-det summary{cursor:pointer;font:700 14px/1.3 var(--f);color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
+.casebar .cohort-res{margin-top:10px;background:var(--block);color:var(--ink);font-size:14px}
+.casebar .cohort-res .docs a{color:var(--ink)}
+.casebar .cohort-res .acts button{color:var(--meta)}
+.casebar .cohort-res .acts button:hover{color:var(--ink)}
+.hero-note{margin:16px 0 0;font:400 14px/1.4 var(--f);color:#bdbdbd}
+.hero-note a{color:#fff;font-weight:700}
+@media (max-width:760px){.casebar{padding-right:0}.casebar .case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .case-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:4px}
 .case-grid label{display:flex;flex-direction:column;gap:6px;font:700 13px/1.2 var(--f);color:#bdbdbd}
 .case-grid select{appearance:none;-webkit-appearance:none;height:44px;width:100%;padding:0 34px 0 12px;border:2px solid #fff;border-radius:0;background:rgba(29,30,32,.92) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23fff' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 12px center;color:#fff;font:700 15px/1 var(--f);cursor:pointer}
@@ -356,18 +373,13 @@ footer .wrap{padding:0}
   <div class="wrap">
     <span class="eyebrow">Gestión académica de pregrado · Escuela de Comunicaciones y Periodismo</span>
     <h1>Normativa de pregrado, caso a caso.</h1>
-    <div class="case" id="cohortBox">
-      <div class="cohort-q" id="cohQ">Ficha del caso<button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button></div>
-      <p class="cohort-help" id="cohHelp">Datos del estudiante que cambian la respuesta. Son opcionales: si faltan y la consulta los requiere, el asistente los pregunta.</p>
-      <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
-      <div class="cohort-res" id="cohortRes" hidden aria-live="polite"></div>
-    </div>
     <form class="search" id="quickForm" autocomplete="off" role="search">
       <label for="quickQ" hidden>Escribe la consulta</label>
       <input id="quickQ" placeholder="Ej.: ¿Puede suspender sus estudios un estudiante con deuda?">
       <button type="submit" aria-label="Preguntar"><span class="ms" aria-hidden="true">arrow_forward</span></button>
     </form>
     <div class="qs" id="heroChips"></div>
+    <p class="hero-note">Las respuestas se ajustan a la <a href="#cohortBox">ficha del caso</a> del asistente.</p>
     
   </div>
 </section>
@@ -378,8 +390,13 @@ footer .wrap{padding:0}
       <button class="info" type="button" data-tip="ai" aria-label="Cómo funciona el asistente"><span class="ms" aria-hidden="true">info</span></button></div>
     <div class="chat">
       <div class="chatbox">
-        <div class="chat-top"><span class="title">Conversación</span><span class="meta" id="modeLbl" style="font-size:14px"></span><a class="coh-chip unset" href="#cohortBox" data-coh-chip style="margin-left:8px">Caso</a>
+        <div class="chat-top"><span class="title">Conversación</span><span class="meta" id="modeLbl" style="font-size:14px"></span>
           <button class="link" id="clearBtn" type="button" style="margin-left:auto"><span class="ms" aria-hidden="true">refresh</span>Nueva</button></div>
+        <div class="casebar" id="cohortBox">
+          <div class="casebar-head"><span class="t" id="cohQ">Ficha del caso</span><button class="info" type="button" data-tip="cohHelp" aria-label="Por qué importan estos datos"><span class="ms" aria-hidden="true">info</span></button><span class="hint">Opcional. Si falta un dato que cambia la respuesta, S.I.B lo pregunta en la conversación.</span><button class="link" type="button" data-clear-case id="clearCase" hidden>Limpiar</button></div>
+          <div class="case-grid" id="caseGrid" role="group" aria-labelledby="cohQ"></div>
+          <details class="case-det" id="caseDet" hidden><summary>Qué implica este caso</summary><div class="cohort-res" id="cohortRes" aria-live="polite"></div></details>
+        </div>
         <div class="msgs" id="msgs" aria-live="polite"></div>
         <div class="status" id="status"></div>
         <form class="composer" id="chatForm" autocomplete="off">
@@ -1838,7 +1855,7 @@ const FACTS=[
  {k:"cohorte",label:"Cohorte (año de ingreso)",ask:"¿En qué año ingresó a la UAI?",why:"Define qué reglamento aplica: el de su cohorte prevalece si le es más favorable (art. 70).",
   opts:COH_ORDER.map(k=>[k,COH[k].label,"Cohorte "+COH[k].label])},
  {k:"ciclo",label:"Ciclo",ask:"¿En qué etapa del programa está?",why:"Cambian las causales, los plazos y quién atiende.",
-  opts:[["primer","Primer año","Primer año"],["comun","Plan común (2.º–3.er año)","Plan común"],["segundo","Segundo ciclo (4.º año o más)","Segundo ciclo"],["bach","Bachillerato","Bachillerato"]]},
+  opts:[["primer","Primer año","Primer año"],["comun","Plan común (2.º–3.º año)","Plan común"],["segundo","Segundo ciclo (4.º año +)","Segundo ciclo"],["bach","Bachillerato","Bachillerato"]]},
  {k:"situacion",label:"Situación académica",ask:"¿Cuál es su situación académica actual?",why:"Algunas solicitudes no proceden en ciertas situaciones (p. ej., en causal de eliminación).",
   opts:[["regular","Regular","Regular"],["recup","Semestre recuperativo","Semestre recuperativo"],["alerta","Alerta académica","Alerta académica"],["causal","Causal de eliminación","Causal de eliminación"],["susp","Suspensión o anulación","Suspensión o anulación"]]}
 ];
@@ -1873,10 +1890,10 @@ function renderCase(){
  g.innerHTML=FACTS.map(f=>`<label><span>${esc(f.label)}</span><select data-fact="${f.k}" class="${CASE[f.k]?"set":""}"><option value="">Sin definir</option>${f.opts.map(o=>`<option value="${o[0]}"${CASE[f.k]===o[0]?" selected":""}>${esc(o[1])}</option>`).join("")}</select></label>`).join("");
  const sum=caseSummary();
  document.querySelectorAll("[data-coh-chip]").forEach(a=>{const side=a.closest(".side");a.textContent=sum?(side?"Caso: "+sum:"Caso activo · editar"):(side?"Definir caso":"Caso");a.title=sum||"";a.classList.toggle("unset",!sum);});
- const r=$("#cohortRes");
- if(!sum){r.hidden=true;$("#cohHelp").hidden=false;}
- else{r.hidden=false;$("#cohHelp").hidden=true;const c=COHORT?COH[COHORT]:null;const ns=caseNotes(FACTS.map(f=>f.k).filter(k=>k!=="cohorte"));
-  r.innerHTML=`<b>Caso activo:</b> ${esc(sum)}${c?`<p style="margin:8px 0 0">${c.res}</p><div class="docs">${c.docs.map(id=>{const d=docById(id);return d?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.titulo.replace(/\s*\(.*\)$/,""))}</a>`:"";}).join("")}</div>`:`<p style="margin:8px 0 0">Sin cohorte definida: se aplica el Reglamento 2026 como regla general.</p>`}${ns.length?`<ul>${ns.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}<div class="acts">${COHORT&&COHORT!=="2026"?`<button type="button" data-tip="cohChanges">Qué cambió en 2026</button>`:""}<button type="button" data-ask="${esc("¿Qué reglas y plazos clave aplican a este caso?")}">Consultar este caso</button><button type="button" data-clear-case>Limpiar caso</button></div>`;}
+ const r=$("#cohortRes"),det=$("#caseDet");$("#clearCase").hidden=!sum;
+ if(!sum){det.hidden=true;r.innerHTML="";}
+ else{det.hidden=false;const c=COHORT?COH[COHORT]:null;const ns=caseNotes(FACTS.map(f=>f.k).filter(k=>k!=="cohorte"));
+  r.innerHTML=`${c?`<p style="margin:0">${c.res}</p><div class="docs">${c.docs.map(id=>{const d=docById(id);return d?`<a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.titulo.replace(/\s*\(.*\)$/,""))}</a>`:"";}).join("")}</div>`:`<p style="margin:0">Sin cohorte definida: se aplica el Reglamento 2026 como regla general.</p>`}${ns.length?`<ul>${ns.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}<div class="acts">${COHORT&&COHORT!=="2026"?`<button type="button" data-tip="cohChanges">Qué cambió en 2026</button>`:""}<button type="button" data-ask="${esc("¿Qué reglas y plazos clave aplican a este caso?")}">Consultar este caso</button></div>`;}
  const line=sum?`<span>Caso activo:</span> <b>${esc(sum)}</b>${caseNotes().length?` <button class="info" type="button" data-tip="caseNote" aria-label="Qué implica este caso"><span class="ms" aria-hidden="true">info</span></button>`:""} <a class="coh-chip" href="#cohortBox" style="margin-left:4px">Editar</a>`:`<span>Las reglas cambian según la cohorte, la sede y la situación del estudiante.</span> <a class="coh-chip unset" href="#cohortBox">Definir caso</a>`;
  ["#cohTram","#cohDocs"].forEach(s=>{const el=$(s);if(el)el.innerHTML=line;});
 }
@@ -2043,7 +2060,7 @@ function md(t){let h=esc(t);
 function add(role,text){const d=document.createElement("div");d.className="msg "+(role==="user"?"u":"a");
  if(role==="user")d.textContent=text;else d.innerHTML=md(text);msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;return d;}
 function welcome(){msgs.innerHTML="";const sum=caseSummary();
- add("assistant","Hola, soy **S.I.B UAI**, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la **unidad**, la **sede**, la **cohorte**, el **ciclo** o la **situación académica**, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo."+(sum?`\n\nCaso activo: **${sum}**.`:"\n\nTambién puedes completar la **ficha del caso** al inicio de la página."));}
+ add("assistant","Hola, soy **S.I.B UAI**, el sistema inteligente de búsqueda de normativa de pregrado. Escribe la consulta del estudiante tal como llegó. Si la respuesta depende de la **unidad**, la **sede**, la **cohorte**, el **ciclo** o la **situación académica**, te pregunto esos datos antes de responder. Cada respuesta cita documento y artículo."+(sum?`\n\nCaso activo: **${sum}**.`:"\n\nTambién puedes completar la **ficha del caso** arriba de esta conversación."));}
 function onCaseChange(){renderSug();renderTram();renderTable();if(!turns.length&&!pending)welcome();}
 welcome();
 
