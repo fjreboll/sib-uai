@@ -243,7 +243,6 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 .deadbar{border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-bottom:64px}
 /* cinta de trámites */
 .tk{position:relative;overflow:hidden;background:var(--dark);height:72px;margin:calc(-1 * var(--gap-sec)) 0 calc(var(--gap-sec) * .6)}
-.tk::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(255,255,255,.28)}
 .tk-track{position:relative;display:flex;width:max-content;height:100%;align-items:center;animation:tkmove 45s linear infinite}
 .tk:hover .tk-track{animation-play-state:paused}
 .tk-item{display:inline-flex;padding:0 28px}
@@ -253,6 +252,7 @@ section.sec + section.sec{border-top:1px solid var(--line)}
 section.plazos{padding-top:0;border-top:4px solid var(--accent)}
 section.plazos .deadbar{margin-bottom:0;border-top:0}
 section.plazos + section.sec{padding-top:72px}
+section.plazos + section.sec > .tk{margin-top:-72px}
 .deadbar-head{display:flex;align-items:center;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
 .deadbar-head .t{font:700 16px/1 var(--f)}
 .deadline-row{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
@@ -421,6 +421,7 @@ footer .wrap{padding:0}
 </section>
 
 <section id="asistente" class="sec">
+  <div class="tk" aria-hidden="true"><div class="tk-track"></div></div>
   <div class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Asistente</span><h2 style="margin-top:12px">Consulta al S.I.B</h2><p>Escribe la consulta tal como llegó. Si la respuesta depende de la unidad, la sede, la cohorte, el ciclo o la situación del estudiante, el sistema te lo pregunta antes de responder y cita documento y artículo.</p></div>
       <button class="info" type="button" data-tip="ai" aria-label="Cómo funciona el asistente"><span class="ms" aria-hidden="true">info</span></button></div>
@@ -449,7 +450,7 @@ footer .wrap{padding:0}
 </section>
 
 <section id="tramites" class="sec">
-  <div class="tk" id="tramTicker" aria-hidden="true"><div class="tk-track" id="tkTrack"></div></div>
+  <div class="tk" id="tramTicker" aria-hidden="true"><div class="tk-track"></div></div>
   <div class="wrap">
     <div class="sec-head"><div><span class="eyebrow">Procedimientos</span><h2 style="margin-top:12px">Trámites</h2><p>Toca <span class="ms" aria-hidden="true" style="vertical-align:-4px;font-size:18px">info</span> para ver requisitos, quién resuelve y la norma.</p><div class="coh-line" id="cohTram"></div></div></div>
     <div class="tramites" id="tramGrid"></div>
@@ -2018,7 +2019,7 @@ const TR=[
 function renderTram(){const ns=caseNotes(["cohorte","situacion"]);$("#tramGrid").innerHTML=TR.map(([ic,t,d,w,p,a],i)=>{TIPS["tr"+i]=`<b class="h">${esc(t)}</b>${esc(d)}${dl([["Resuelve",esc(w)],["Plazo",esc(p)],["Norma",esc(a)]])}${ns.length?`<p style="margin:10px 0 0;padding-top:10px;border-top:1px solid #444">${esc(ns.join(" "))}</p>`:""}`;
  return `<article class="tram"><div class="head">${glyph(t,40)}<span class="eyebrow">${esc(a)}</span><button class="info" type="button" data-tip="tr${i}" aria-label="Detalle: ${esc(t)}"><span class="ms" aria-hidden="true">info</span></button></div><div class="body"><h4>${esc(t)}</h4><span class="when">${esc(p)} · ${esc(w)}</span><button class="link" type="button" data-ask="${esc("¿Cómo se tramita: "+t+"? Requisitos, quién resuelve y plazos 2026.")}">Consultar <span class="ms" aria-hidden="true">arrow_forward</span></button></div></article>`;}).join("");}
 renderTram();
-(function(){const t=$("#tkTrack");if(!t)return;const one=TR.map(r=>`<span class="tk-item" title="${esc(r[1])}">${glyph(r[1],40)}</span>`).join("");t.innerHTML=one+one;})();
+(function(){const one=TR.map(r=>`<span class="tk-item" title="${esc(r[1])}">${glyph(r[1],40)}</span>`).join("");document.querySelectorAll(".tk-track").forEach(t=>{t.innerHTML=one+one;});})();
 
 /* ---------- organigrama ---------- */
 const U={
