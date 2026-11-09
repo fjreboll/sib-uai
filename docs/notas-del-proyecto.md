@@ -3,7 +3,7 @@
 Bitácora Académica es una guía no oficial sobre reglamentos, plazos, trámites y responsables de pregrado para la Escuela de Comunicaciones y Periodismo de la UAI. Está dirigida a estudiantes, docentes, equipos administrativos y autoridades.
 
 - Sitio: https://fjreboll.github.io/bitacora-academica/
-- Corte de la información: 7 de octubre de 2026. La sección de cohortes se agregó el 8 de octubre de 2026.
+- Corte de la información: 7 de octubre de 2026. La sección de cohortes se agregó el 8 de octubre de 2026. Actualización del 9 de noviembre de 2026: se usan las versiones del portal de Transparencia UAI (www.uai.cl/la-universidad/transparencia) y, ante conflicto, la más reciente; se agregan los reglamentos por cohorte 2020–2025, admisión 2025, aranceles 2026–2027, magíster, protocolo de padres/madres/cuidadores 2026 y política de IA 2026.
 
 ## Estructura del sitio
 
@@ -14,7 +14,7 @@ Bitácora Académica es una guía no oficial sobre reglamentos, plazos, trámite
    - Los próximos 5 plazos del Calendario Académico 2026.
    - 15 trámites con sus requisitos, quién resuelve y la norma.
 4. **Organigrama funcional:** construido a partir de los reglamentos; no reemplaza al organigrama oficial. Incluye las secretarias de pregrado según la inicial del apellido.
-5. **Documentos:** el catálogo de 55 fuentes oficiales, con filtros por estado y por cohorte.
+5. **Documentos:** el catálogo de 75 fuentes oficiales, con filtros por estado y por cohorte.
 
 ## Año de ingreso (cohorte)
 
